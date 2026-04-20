@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api:*)",
+      "Bash(python -c ':*)",
+      "Bash(python scripts/run_scoring.py --yes)",
+      "Bash(python scripts/run_pipeline.py --limit-signals 10 --yes)",
+      "Bash(python scripts/run_pipeline.py --yes)",
+      "Bash(python scripts/run_retrieval.py)",
+      "Bash(python src/portfolio.py)",
+      "Bash(python3 -c ':*)",
+      "Bash(streamlit run:*)",
+      "Bash(curl -s http://localhost:8501)",
+      "Bash(curl -s http://localhost:8501/healthz)",
+      "Bash(python3 -c \"import sys; content = sys.stdin.read\\(\\); print\\('App loaded' if 'streamlit' in content.lower\\(\\) else 'ERROR: unexpected response'\\); print\\(f'Response size: {len\\(content\\)} chars'\\)\")"
+    ]
+  }
+}

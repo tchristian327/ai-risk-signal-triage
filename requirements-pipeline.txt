@@ -1,0 +1,11 @@
+# Pipeline dependencies for local development.
+# Run: pip install -r requirements-pipeline.txt
+# (Streamlit Community Cloud does NOT use this file.)
+boto3
+anthropic
+sentence-transformers
+pydantic
+pyyaml
+python-dotenv
+certifi
+numpy

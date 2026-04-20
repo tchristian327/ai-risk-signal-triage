@@ -1,0 +1,2342 @@
+[
+  {
+    "signal_id": "gov-007",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.5259135365486145
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.48117226362228394
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4747983515262604
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4712623059749603
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.46570339798927307
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.45617660880088806
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4433445334434509
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.44280222058296204
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4194257855415344
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.40833115577697754
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4052236080169678
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.3875375986099243
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.3848612606525421
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.3681676983833313
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.35761335492134094
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.31715744733810425
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.30193397402763367
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2966909110546112
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2756738066673279
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.274471253156662
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.25431081652641296
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.24283865094184875
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2224065661430359
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.22192509472370148
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2211400419473648
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.21307292580604553
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.21122238039970398
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.20767773687839508
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2072785496711731
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.19752593338489532
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.19233733415603638
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.19090326130390167
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.18615418672561646
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.18213440477848053
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.18119288980960846
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.17299975454807281
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.1683233380317688
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.16435706615447998
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.15712468326091766
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.15089096128940582
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.13970254361629486
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.1310826539993286
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.12821568548679352
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.12420313060283661
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.11968705803155899
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.11077560484409332
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.10865546762943268
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.1066652312874794
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.10349445044994354
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.10101929306983948
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.09354772418737411
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.09300363808870316
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.09095392376184464
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.08888401836156845
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.0876784548163414
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.07413259893655777
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.07226873189210892
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06926747411489487
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06549598276615143
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06531240791082382
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06434208899736404
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06191307306289673
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.051289986819028854
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.050029728561639786
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.04863344505429268
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.045089494436979294
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.03753648325800896
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.03545041009783745
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.025733914226293564
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.023633500561118126
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.021796010434627533
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.017372900620102882
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.012985410168766975
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": -0.004126038867980242
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": -0.02538095973432064
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": -0.03209924325346947
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": -0.039371248334646225
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": -0.048256244510412216
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.5515788793563843
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.5276364088058472
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.5118281245231628
+  },
+  {
+    "signal_id": "gov-007",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4974325895309448
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4924648702144623
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.46918773651123047
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4691835939884186
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4668545424938202
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4628765881061554
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4581027030944824
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.45628437399864197
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4519278407096863
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4504622220993042
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.4373471438884735
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.42196354269981384
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.3832217752933502
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.38228821754455566
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.3596712648868561
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.3370044529438019
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.29085227847099304
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.2820284962654114
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.2697232961654663
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.26702719926834106
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.25472575426101685
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.24573083221912384
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.24114485085010529
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.24114172160625458
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.23216277360916138
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.21788817644119263
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.21777920424938202
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.21593815088272095
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.19787800312042236
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.19587606191635132
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.18540525436401367
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.1787983626127243
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.1764092892408371
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.17268995940685272
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.17260703444480896
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.16379407048225403
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.15876470506191254
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.15314938127994537
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.14828123152256012
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.14585448801517487
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.1432286500930786
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.1422615647315979
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.1245916485786438
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.12281728535890579
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.12008333206176758
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.11348193883895874
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.11181849986314774
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09911836683750153
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09812836349010468
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09684376418590546
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09580572694540024
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09412293881177902
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09332592785358429
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.08828270435333252
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.08473241329193115
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.08398787677288055
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.08149600028991699
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.0791790708899498
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.0768875852227211
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.0724974051117897
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.07238724082708359
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.07226189970970154
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.06730061769485474
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.06712798774242401
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.06647100299596786
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.05290163680911064
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.038308512419462204
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.03374487906694412
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.020468639209866524
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.02008509635925293
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.011794216930866241
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.007829885929822922
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.007540388032793999
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": -0.0011488051386550069
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": -0.11343496292829514
+  },
+  {
+    "signal_id": "gov-007",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.5376989841461182
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.5200800895690918
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.5193511843681335
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.46360141038894653
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.4524511694908142
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.4444858431816101
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.44290122389793396
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.4427221119403839
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.4281977415084839
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.3957578241825104
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.393033504486084
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.377127468585968
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.3677704930305481
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.3644223213195801
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.3615580201148987
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.3602786362171173
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.35242483019828796
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.33237889409065247
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.29873722791671753
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.2778051495552063
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.27060502767562866
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.26755619049072266
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.25702932476997375
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.24270091950893402
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.23225508630275726
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.22926974296569824
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.22681809961795807
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.22259339690208435
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.21832028031349182
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.21607723832130432
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.19893144071102142
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.1909501999616623
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.18768244981765747
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.18664005398750305
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.18514373898506165
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.18249674141407013
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.18154728412628174
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.17970412969589233
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.17953328788280487
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.170006662607193
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.16996978223323822
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.16677911579608917
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.15635186433792114
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.15470199286937714
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.14644694328308105
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.14554952085018158
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.14528268575668335
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.12383480370044708
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11968939751386642
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11673150956630707
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11625787615776062
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11291039735078812
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.09539446234703064
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.09513935446739197
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.09279494732618332
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.08263958990573883
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.0766945406794548
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.06966878473758698
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.06955862790346146
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.06550907343626022
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.06349847465753555
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.062186937779188156
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.05641894042491913
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.04577692225575447
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.04459446668624878
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.04006795957684517
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.03674062341451645
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.03566306084394455
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.024956276640295982
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.024362994357943535
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.023970207199454308
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.010375547222793102
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.010316109284758568
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "doc_extractor",
+    "cosine_similarity": -0.01136382482945919
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "doc_extractor",
+    "cosine_similarity": -0.011813276447355747
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "doc_extractor",
+    "cosine_similarity": -0.017062442377209663
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "doc_extractor",
+    "cosine_similarity": -0.0361536368727684
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "doc_extractor",
+    "cosine_similarity": -0.037564199417829514
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.6991751194000244
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.6593400239944458
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.6092538833618164
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5825458765029907
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.576576828956604
+  },
+  {
+    "signal_id": "gov-007",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5696207880973816
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5584188103675842
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.546952486038208
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5410915613174438
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.514045774936676
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5103470683097839
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5086928009986877
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5074989795684814
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.4873376488685608
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.4844825565814972
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.4741979241371155
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.4710245728492737
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.44562381505966187
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.3610743582248688
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.3464409410953522
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.31039899587631226
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.3089551329612732
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.29660502076148987
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2952381670475006
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.28228145837783813
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.28086304664611816
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.27912741899490356
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.27069777250289917
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2695331573486328
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.26889345049858093
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2471335232257843
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.24687117338180542
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.24273206293582916
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.23936201632022858
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2386406511068344
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2386169731616974
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.23709776997566223
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2352362722158432
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.23256228864192963
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.22630226612091064
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.19802159070968628
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.19510307908058167
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.18694762885570526
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.17829711735248566
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.17631708085536957
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.1716604083776474
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.16244488954544067
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.16051536798477173
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.15623784065246582
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.15496084094047546
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.15464691817760468
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.14851680397987366
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.14619386196136475
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.13428422808647156
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.12230575084686279
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.12225903570652008
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.11462818831205368
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.1065530925989151
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.10489806532859802
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.10330722481012344
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.09521059691905975
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.08785293251276016
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.08704149723052979
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.08419372886419296
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.07302364706993103
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.07203255593776703
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.06895318627357483
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.06748602539300919
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.05665614455938339
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.04914822801947594
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.048936713486909866
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.029526155441999435
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.026933038607239723
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.01611506938934326
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.010790534317493439
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.02098153904080391
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.02154429443180561
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.03752245008945465
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.6822046041488647
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.6132106781005859
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.5909202098846436
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.5577314496040344
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.5207046270370483
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.47181105613708496
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.46832361817359924
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.4584803283214569
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.45392072200775146
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.4467545449733734
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.42337173223495483
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.4173130393028259
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.41678306460380554
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.4115653932094574
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.39631223678588867
+  },
+  {
+    "signal_id": "gov-007",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3859838843345642
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3859139382839203
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.38216570019721985
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.37888801097869873
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.37213334441185
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3303200602531433
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3192131519317627
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.28219959139823914
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27921509742736816
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27414217591285706
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.2684616446495056
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.2539319396018982
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.24076950550079346
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.21995888650417328
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.21936999261379242
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.21047644317150116
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.20915423333644867
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.20407190918922424
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.19063499569892883
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.18964457511901855
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.18855610489845276
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.16571062803268433
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.1538817584514618
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.1537078469991684
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.15154819190502167
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.1459956169128418
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.14387300610542297
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.14301492273807526
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.14103057980537415
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.1389666050672531
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.13652954995632172
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.1350444108247757
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.13229818642139435
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.13106170296669006
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.12639476358890533
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.12467528879642487
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.12132813036441803
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.11659704893827438
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.11369577050209045
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.11356616020202637
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.10709480196237564
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.09797346591949463
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.09576050192117691
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.0956025943160057
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.09554322063922882
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.09227325767278671
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.06586595624685287
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.06559043377637863
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.06394834816455841
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.05812535807490349
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.05261477082967758
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.04060600697994232
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.039022766053676605
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.03886387497186661
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.03351730480790138
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.017853712663054466
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.0046844868920743465
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.0025319624692201614
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.0004152050241827965
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.0198162030428648
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.021588750183582306
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.024434436112642288
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.04218574985861778
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.7388865351676941
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.6964076161384583
+  },
+  {
+    "signal_id": "gov-004",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.6446546316146851
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.6162843704223633
+  },
+  {
+    "signal_id": "gov-005",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.6073445081710815
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.6011248230934143
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5905569195747375
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5824170708656311
+  },
+  {
+    "signal_id": "gov-011",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5581374764442444
+  },
+  {
+    "signal_id": "gov-017",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.548335075378418
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5408356785774231
+  },
+  {
+    "signal_id": "gov-006",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5347443222999573
+  },
+  {
+    "signal_id": "gov-013",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5080640316009521
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.4931398630142212
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.48648837208747864
+  },
+  {
+    "signal_id": "gov-007",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.4715791940689087
+  },
+  {
+    "signal_id": "gov-016",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.4352288842201233
+  },
+  {
+    "signal_id": "gov-014",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.41661617159843445
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.33343252539634705
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.31799232959747314
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.2992289662361145
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.2869742810726166
+  },
+  {
+    "signal_id": "aiid-8",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.285373330116272
+  },
+  {
+    "signal_id": "aiid-20",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.28383180499076843
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.23112106323242188
+  },
+  {
+    "signal_id": "aiid-13",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.22844085097312927
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.22784414887428284
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.22774161398410797
+  },
+  {
+    "signal_id": "aiid-45",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.22376474738121033
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.20531833171844482
+  },
+  {
+    "signal_id": "aiid-125",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.2047453671693802
+  },
+  {
+    "signal_id": "aiid-110",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.19836266338825226
+  },
+  {
+    "signal_id": "aiid-31",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.19785931706428528
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1935909539461136
+  },
+  {
+    "signal_id": "aiid-40",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.18761533498764038
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.18348178267478943
+  },
+  {
+    "signal_id": "aiid-212",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.17502275109291077
+  },
+  {
+    "signal_id": "aiid-149",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.15885807573795319
+  },
+  {
+    "signal_id": "aiid-57",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.14907298982143402
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1478424370288849
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.13502538204193115
+  },
+  {
+    "signal_id": "aiid-19",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1331656277179718
+  },
+  {
+    "signal_id": "aiid-61",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1321049928665161
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1255960911512375
+  },
+  {
+    "signal_id": "aiid-46",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.11823835968971252
+  },
+  {
+    "signal_id": "aiid-28",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.11659260094165802
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.11528810113668442
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.11445142328739166
+  },
+  {
+    "signal_id": "aiid-226",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.10861624032258987
+  },
+  {
+    "signal_id": "aiid-37",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1035933792591095
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.09045383334159851
+  },
+  {
+    "signal_id": "aiid-41",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.09007750451564789
+  },
+  {
+    "signal_id": "aiid-201",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.08657406270503998
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.07711117714643478
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.07671758532524109
+  },
+  {
+    "signal_id": "aiid-167",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.0663270428776741
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.06495745480060577
+  },
+  {
+    "signal_id": "aiid-26",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.06406427174806595
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.06332369893789291
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.05490340292453766
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.052487265318632126
+  },
+  {
+    "signal_id": "aiid-142",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.04449259117245674
+  },
+  {
+    "signal_id": "aiid-69",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.04186756908893585
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.033705588430166245
+  },
+  {
+    "signal_id": "aiid-15",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.032207392156124115
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.02859494276344776
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.01929681934416294
+  },
+  {
+    "signal_id": "aiid-18",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.018372615799307823
+  },
+  {
+    "signal_id": "aiid-24",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.0033926833420991898
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.014655914157629013
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.021549668163061142
+  },
+  {
+    "signal_id": "aiid-68",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.03822492063045502
+  },
+  {
+    "signal_id": "aiid-32",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.04859638214111328
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.056908514350652695
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.05798770487308502
+  },
+  {
+    "signal_id": "aiid-229",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.06721770763397217
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.07207920402288437
+  },
+  {
+    "signal_id": "aiid-55",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.08455272018909454
+  }
+]

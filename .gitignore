@@ -1,0 +1,9 @@
+.env
+.env.local
+__pycache__/
+.venv/
+*.pyc
+data/signals/raw/
+data/cache/
+docs/screenshots/
+.DS_Store

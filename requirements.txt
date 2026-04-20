@@ -1,0 +1,5 @@
+# App runtime dependencies (used by Streamlit Community Cloud).
+# The Streamlit dashboard only needs these two — keep this file minimal
+# to avoid hitting Cloud's install size limits.
+streamlit
+pydantic

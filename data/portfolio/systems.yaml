@@ -1,0 +1,163 @@
+systems:
+  - id: auto_claims_summarizer
+    name: Auto Claims Summarizer
+    purpose: >-
+      Generates structured summaries of auto insurance claims from adjuster notes,
+      photos, and repair estimates. Used to reduce manual review time and standardize
+      claim documentation across adjusters.
+    model_type: LLM
+    data_inputs:
+      - Adjuster free-text notes
+      - Repair shop estimates (PDF/text)
+      - Vehicle damage photos (via vision model)
+      - Claimant recorded statements (transcribed)
+    users:
+      - Claims adjusters
+      - Claims supervisors
+      - QA reviewers
+    deployment_context: >-
+      Runs automatically when a claim is submitted or updated. Output is a structured
+      summary surfaced in the claims management UI. Adjusters are expected to review
+      before finalizing. Not used for coverage decisions.
+    known_risks:
+      - Hallucination and factual confabulation of damage amounts or policy terms not present in source documents
+      - Prompt injection via adversarial content embedded in claimant narratives or repair shop notes
+      - Inconsistent summarization of ambiguous or conflicting adjuster notes, eroding trust in outputs
+      - PII leakage if generated summaries are logged, cached, or shared outside the claims management system
+      - Grounding failures when source documents are low-quality scans, causing the model to fabricate structured fields
+
+  - id: fraud_detector
+    name: Claims Fraud Detector
+    purpose: >-
+      Scores auto insurance claims on likelihood of fraud using structured claim
+      metadata and historical patterns. Flags high-risk claims for human investigator
+      review before payment is released.
+    model_type: gradient boosted tree
+    data_inputs:
+      - Claim metadata (date, location, vehicle type, claim amount)
+      - Claimant history (prior claims, policy tenure)
+      - Third-party data (DMV records, repair shop fraud history)
+      - Network features (shared addresses, phones, repair shops across claims)
+    users:
+      - Special Investigations Unit (SIU) investigators
+      - Claims adjusters (see flagged status only)
+      - Compliance team
+    deployment_context: >-
+      Scores each claim within minutes of submission. Flags above a threshold route
+      to the SIU queue. Adjusters see a binary flag but not the score or features.
+      Model output never directly denies a claim; a human investigator makes that call.
+    known_risks:
+      - Disparate impact on protected classes via proxy variables (zip code, vehicle age, repair shop) that encode race or income
+      - Adverse action explainability gap — flagged claimants cannot be given a meaningful reason for investigation under current feature set
+      - Training data poisoning through feedback loop bias — historically flagged populations are over-represented, amplifying past investigator bias
+      - Concept drift as fraud rings evolve tactics faster than the model retraining cadence, degrading precision over time
+      - Adversarial evasion by sophisticated fraud networks that learn to game the flagging threshold
+
+  - id: underwriting_scorer
+    name: Underwriting Risk Scorer
+    purpose: >-
+      Produces a risk score for new personal auto policies that informs pricing tier
+      assignment. Combines actuarial rules with ML-derived risk factors to estimate
+      expected loss ratio for each applicant.
+    model_type: rules + ML ensemble
+    data_inputs:
+      - Applicant demographics and self-reported driving history
+      - Motor vehicle records (MVR)
+      - Credit-based insurance score
+      - Geographic risk factors (weather, theft, traffic density)
+      - Prior carrier loss history (where available)
+    users:
+      - Underwriting team
+      - Pricing actuaries
+      - Distribution partners (agents)
+    deployment_context: >-
+      Runs at quote time. Score maps to a pricing tier that determines premium. Agents
+      see the tier but not the raw score. High-risk applicants above a hard cutoff are
+      declined automatically; near-threshold cases go to manual underwriting review.
+    known_risks:
+      - Fairness audit failures — credit-based insurance score and geographic features may produce disparate impact on race-protected applicants in violation of state insurance anti-discrimination rules
+      - Adverse action notice inadequacy under FCRA and state insurance codes — model cannot generate the specific reasons required for applicants who are declined or surcharged
+      - Label leakage from historical underwriting decisions baking in past discriminatory practices into training data
+      - Model drift under macroeconomic shifts (e.g., post-pandemic loss patterns) without a scheduled retraining trigger
+      - Auto-decline at the hard cutoff has no human review or appeal mechanism, creating high-stakes adverse action with no recourse
+
+  - id: customer_chatbot
+    name: Customer Service Chatbot
+    purpose: >-
+      Handles routine customer inquiries via the company website and mobile app,
+      including policy questions, billing, claims status, and coverage explanations.
+      Escalates to a live agent when it cannot resolve the issue.
+    model_type: LLM
+    data_inputs:
+      - Customer policy data (via API lookup)
+      - Claims status data (via API lookup)
+      - Billing and payment history
+      - Company knowledge base (coverage FAQs, state-specific rules)
+      - Conversation history within session
+    users:
+      - Policyholders (direct)
+      - Prospective customers (pre-purchase inquiries)
+    deployment_context: >-
+      Available 24/7 on web and mobile. Handles ~60% of inbound contacts without
+      escalation. Live agents can see the conversation transcript when they take over.
+      Not authorized to make coverage commitments or process claims decisions.
+    known_risks:
+      - Hallucination of coverage details, policy limits, or exclusions not present in the knowledge base, creating unauthorized commitments
+      - Prompt injection via customer-supplied input causing the model to bypass restrictions or reveal internal instructions
+      - Escalation failures on emotionally charged claims (total loss, injury, death) where the model continues handling instead of handing off
+      - Inappropriate tone or insensitive responses on claims involving serious injury, grief, or financial distress
+      - Model drift when product terms or state-specific regulations change and the knowledge base is not updated in sync
+
+  - id: telematics_pricer
+    name: Telematics Pricing Model
+    purpose: >-
+      Adjusts renewal premiums for enrolled policyholders based on driving behavior
+      captured via a mobile app or plug-in device. Safer driving results in discounts;
+      risky driving patterns may result in surcharges at renewal.
+    model_type: regression + ML
+    data_inputs:
+      - Telematics trip data (speed, braking, cornering, time-of-day)
+      - Miles driven
+      - Phone distraction events (where app-based)
+      - Historical claims for telematics-enrolled population
+    users:
+      - Actuarial pricing team
+      - Renewal underwriters
+      - Policyholders (via score dashboard in the app)
+    deployment_context: >-
+      Driving score is computed on a rolling 90-day window and finalized 30 days
+      before renewal. Score directly affects renewal premium. Policyholders can opt
+      out but lose any earned discount. Score is visible to the policyholder in the app.
+    known_risks:
+      - Proxy discrimination — driving patterns (time-of-day, route density) correlate strongly with neighborhood, occupation, and protected-class status
+      - Sensor spoofing and adversarial data inputs — policyholders or third parties manipulating GPS or accelerometer signals to game the score
+      - Continuous location tracking raises privacy concerns beyond what policyholders consented to at enrollment, with potential for re-identification
+      - Model drift as post-pandemic driving behavior patterns diverge from training data, causing systematic score miscalibration
+      - Adverse action explainability gap — policyholders who receive surcharges cannot get specific, auditable reasons for their score
+
+  - id: doc_extractor
+    name: Document OCR and Extraction Pipeline
+    purpose: >-
+      Extracts structured data from unstructured insurance documents including
+      medical bills, police reports, contractor estimates, and third-party correspondence.
+      Populates claim fields automatically to reduce manual data entry.
+    model_type: vision + LLM
+    data_inputs:
+      - Scanned PDFs and image uploads (JPEG, PNG, TIFF)
+      - Email attachments forwarded by adjusters
+      - Third-party vendor document submissions
+    users:
+      - Claims adjusters
+      - Medical bill reviewers
+      - Legal and subrogation teams
+    deployment_context: >-
+      Triggered when a document is attached to a claim. Extracted fields are pre-filled
+      in the claim form with a confidence indicator. Adjusters are expected to verify
+      before saving. High-confidence extractions on standard form types are increasingly
+      accepted without review as the system proves reliable.
+    known_risks:
+      - Hallucination of field values not present in the source document when OCR confidence is low, silently populating claim fields with fabricated data
+      - Adversarial document manipulation — fraudulent parties submitting altered PDFs or images designed to cause the model to extract inflated amounts
+      - Demographic bias in handwriting recognition — model accuracy degrades on handwriting styles associated with non-native English speakers or older writers
+      - OCR errors on low-quality or damaged scans propagating to high-stakes claim fields (medical bill totals, dates of service) without adjuster review
+      - Sensitive medical and legal information extracted into claim fields with inappropriately broad internal access
