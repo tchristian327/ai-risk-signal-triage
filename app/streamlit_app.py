@@ -1,6 +1,14 @@
 from __future__ import annotations
 
+import sys
 from pathlib import Path
+
+# Streamlit Cloud runs app/streamlit_app.py from a working directory that
+# doesn't include the project root on sys.path. Add it explicitly so that
+# `from src.schemas import ...` resolves correctly.
+PROJECT_ROOT = Path(__file__).parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 import streamlit as st
 
@@ -21,8 +29,6 @@ from app.components import (  # noqa: E402
     render_signal_card,
     render_system_card,
 )
-
-PROJECT_ROOT = Path(__file__).parent.parent
 
 
 @st.cache_data

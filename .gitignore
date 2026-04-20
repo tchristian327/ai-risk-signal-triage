@@ -7,3 +7,4 @@ data/signals/raw/
 data/cache/
 docs/screenshots/
 .DS_Store
+*.egg-info/
