@@ -59,6 +59,11 @@ The system is split into three concerns, and this separation must be preserved:
 
 The Streamlit app must be fast and cheap because Streamlit reruns on every interaction. All expensive work (embeddings, LLM calls) happens in the pipeline, runs once, and writes results to `data/outputs/`. The dashboard only reads. The `Digest` schema is the contract between pipeline (producer) and dashboard (consumer) — changes to it require updating both sides.
 
+**App layer conventions (established Day 5):**
+- `requirements.txt` contains only app runtime deps (`streamlit`, `pydantic`). All pipeline deps (`boto3`, `sentence-transformers`, etc.) live in `requirements-pipeline.txt`. Streamlit Community Cloud reads only `requirements.txt` — adding pipeline deps there will blow the install size limit or slow deploys dramatically.
+- All rendering helpers (`render_score_badge`, `render_pair_row`, `render_system_card`, `render_signal_card`, and any future ones) live in `app/components.py`. Never put multi-line render logic inline in `streamlit_app.py`.
+- Do not remove the `sys.path.insert` at the top of `app/streamlit_app.py`. It is required for Streamlit Cloud to resolve `from src.schemas import ...`. See DECISIONS.md for why `pyproject.toml` alone was insufficient.
+
 ## Scoring pipeline
 
 Two stages, in this order:
