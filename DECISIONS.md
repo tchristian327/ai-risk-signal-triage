@@ -177,3 +177,31 @@ exposed the next calibration problem.
 **confirm_fn callable pattern.** Any pipeline function that needs interactive cost/action confirmation accepts a `confirm_fn: Callable[[], bool]` parameter defaulting to a lambda that calls `input()`. The function never calls `input()` directly. This keeps business logic testable (tests pass `lambda: True`) and keeps UX decisions in the CLI layer. Apply to any future interactive prompts in scoring, eval, or training scripts.
 
 **Round-trip write/validate pattern.** After writing any JSON output to disk, immediately re-read and validate against the Pydantic schema before returning. This catches serialization drift at the boundary — if the schema and the written file diverge, the error surfaces on the run that caused it rather than silently on the first dashboard load. Apply to any future output-writing code.
+
+---
+
+## 2026-04-20 — requirements.txt split into app-only and pipeline
+
+**Decision:** `requirements.txt` contains only `streamlit` and `pydantic`. All pipeline deps (`boto3`, `anthropic`, `sentence-transformers`, etc.) live in `requirements-pipeline.txt`.
+
+**Why:** Discovered during the Day 5 Streamlit Cloud deploy. `sentence-transformers` alone pulls PyTorch (~2GB installed), which blows the Cloud free-tier install. Splitting keeps the Cloud install to two lightweight packages. Local pipeline dev runs `pip install -r requirements-pipeline.txt`. Two files is marginally more maintenance, but getting the deploy right is worth it and the rule is enforced in `CLAUDE.md`.
+
+---
+
+## 2026-04-20 — By Signal dropdown shows only signals with scored pairs
+
+**Decision:** The By Signal tab's dropdown shows only the 27 signals (of 78 total) that have at least one scored pair — not all signals in the digest.
+
+**Why:** After loading the digest, 51 of 78 raw signals had zero scored pairs — filtered out at the retrieval stage (cosine similarity below 0.3). Showing all 78 would mean 65% of dropdown picks hit the "no pairs" empty state, making the tab feel broken. Only showing signals that made it through retrieval is the correct UX. A caption explains the count.
+
+**Implication for Day 6:** Stratified sampling for the eval set should be drawn from these 27 signals, not the full 78. Trying to sample from signals with no pairs will produce an empty result.
+
+---
+
+## 2026-04-20 — Score distribution is 4-heavy going into Day 6 eval
+
+**Observation:** 118 scored pairs distributed as {0:27, 1:17, 2:7, 3:38, 4:29}. Heavy weight on scores 3-4 (57% of pairs), thin middle (7 pairs at score 2).
+
+**Implication for Day 6:** Stratified sampling on cosine similarity (per plan) is still correct, but the resulting eval set may be label-heavy in the 3-4 bucket and label-thin in the 2 bucket. If the labeled eval ends up concentrated at the extremes, the off-by-one and confusion-matrix metrics will be less informative in the middle of the rubric. Worth watching during labeling — if the score-2 bucket is visibly underrepresented, note it in `LABELING_NOTES.md` rather than trying to rebalance mid-labeling.
+
+Not taking action now. Logged so the Day 7 report can reference this when interpreting metrics.

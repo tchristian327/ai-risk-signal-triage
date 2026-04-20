@@ -85,7 +85,7 @@ An optional baseline classifier path exists for evaluation purposes only (see "S
 - **Structured output:** Pydantic models. Use the Bedrock Converse API's native tool use for structured output (same conceptual shape as the direct SDK's tool use, different request envelope).
 - **Dashboard:** Streamlit.
 - **Deployment:** Streamlit Community Cloud.
-- **Package management:** `uv` if available, otherwise `pip` with `requirements.txt`.
+- **Package management:** `uv` if available, otherwise `pip`. For local pipeline development use `requirements-pipeline.txt`. For the Streamlit Cloud app only: `requirements.txt` (app-only deps). Do not add pipeline deps to `requirements.txt`.
 - **Data formats:** YAML for the portfolio (human-edited), JSON for everything else (machine-written).
 - **Infrastructure:** `aws-cdk-lib` (Python) for provisioning AWS resources. Added on Day 12.
 - **Agent framework:** `langgraph` for the scorer refactor. Optional, added on Day 13.
