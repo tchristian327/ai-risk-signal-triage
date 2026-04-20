@@ -160,6 +160,18 @@ exposed the next calibration problem.
 
 ---
 
+## 2026-04-18 — Streamlit Cloud: pyproject.toml for src/ importability
+
+**Decision:** Use a minimal `pyproject.toml` + `-e .` in `requirements.txt` rather than a `sys.path` insert in `streamlit_app.py` to make `from src.schemas import Digest` work on Streamlit Cloud.
+
+**Why:** Streamlit Cloud runs `pip install -r requirements.txt` in the repo root before launching the app. Adding `-e .` causes pip to install the repo as a package, which puts `src/` and `app/` on the Python path cleanly. The `sys.path` hack works but is a runtime side-effect that silently depends on the working directory — the packaging approach is self-documenting and tool-friendly.
+
+**What was rejected:** `sys.path.insert(0, str(Path(__file__).parent.parent))` at the top of `streamlit_app.py`. Works, but fragile and the kind of thing that shows up in code review as unexplained magic.
+
+**Scope note:** `pyproject.toml` declares no explicit package list — setuptools auto-discovers `src/` and `app/` via their `__init__.py` files. If new top-level packages are added later, they'll be picked up automatically as long as they have `__init__.py`.
+
+---
+
 ## 2026-04-18 — Pipeline code conventions: confirm_fn pattern and round-trip validation
 
 **Decision:** Two conventions established during Day 4 pipeline work and used consistently going forward.

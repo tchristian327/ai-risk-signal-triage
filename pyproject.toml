@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-risk-triage"
+version = "0.1.0"
+requires-python = ">=3.11"
+
+# setuptools auto-discovers any directory with __init__.py (src/, app/).
+# This makes `from src.schemas import Digest` work on Streamlit Cloud
+# without sys.path manipulation — pip installs the repo root as a package
+# when requirements.txt contains `-e .`.

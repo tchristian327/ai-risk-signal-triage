@@ -1,5 +1,7 @@
 # App runtime dependencies (used by Streamlit Community Cloud).
-# The Streamlit dashboard only needs these two — keep this file minimal
-# to avoid hitting Cloud's install size limits.
+# -e . installs the repo root as a package so `from src.schemas import Digest`
+# works without sys.path hacks. Keep this file minimal — sentence-transformers
+# pulls in PyTorch (~2GB) and will blow the Cloud install size limit.
+-e .
 streamlit
 pydantic
