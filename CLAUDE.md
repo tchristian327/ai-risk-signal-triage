@@ -138,6 +138,14 @@ These are optional additions built after all planned days (including Day 13) are
 
 **PyTorch / classical ML baseline.** This addition extends the Day 8 logistic regression baseline by adding a small PyTorch MLP (one hidden layer, dropout) as a second classifier in the eval comparison. It depends on Day 8 being complete -- the sklearn baseline, the cached embeddings, and the labeled eval set are all prerequisites. Both classifiers are trained on the cached sentence-transformer embeddings plus human labels from the eval set. The output is an expanded comparison table in the dashboard's eval section with rows for LLM judge, logistic regression, PyTorch MLP, and columns for accuracy, recall at threshold >= 3, precision at threshold >= 3, and cost per 100 pairs. The story the table tells: the classifier is much cheaper but misses urgent items, which is the wrong tradeoff for governance given the asymmetric error costs. Estimated effort: one focused half-day (4-6 hours). Prerequisites: the labeled eval set must exist and LLM judge metrics must be stable.
 
+## Eval outputs
+
+All Week 2 evaluation artifacts live in `data/eval/`:
+- `pairs_to_label.json` — the 50 (signal, system) pairs selected for labeling (stratified sample)
+- `labeled_pairs.json` — Tim's hand-labeled ground truth (populated during Day 6)
+- `LABELING_NOTES.md` — observations noted during the labeling session
+- Later days will add: `metrics_llm_judge_v1.json`, `metrics_llm_judge_v2.json`, `metrics_baseline.json`, `predictions_llm_judge_v1.json`, `predictions_llm_judge_v2.json`, `predictions_baseline.json`, `error_analysis_v1.md`, `error_analysis_v2.md`, `COMPARISON.md`, `PROMPT_CHANGELOG.md`, `REPORT_WEEK2.md`
+
 ## Related files
 
 - `PLAN.md` — the master build plan covering all days (1-13) and the stretch addition. Referenced throughout this doc. Read it first to understand the overall shape.

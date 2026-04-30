@@ -224,7 +224,7 @@ After the core data science work is complete, one additional day demonstrates th
 **Goal:** Refactor the LLM scorer from a plain Python function into a small LangGraph graph, to demonstrate hands-on experience with a named agent framework from the JD. Keep the scope tight. This is interview signal, not a redesign.
 
 **Outputs:**
-- `langgraph` added to `requirements.txt`
+- `langgraph` added to `requirements-pipeline.txt`
 - `src/scoring.py` refactored so the scorer is implemented as a LangGraph graph with two nodes: a "score" node that calls Bedrock and produces the structured output, and a "self_check" node that re-reads the score and reasoning and flags low-confidence cases (e.g., score of 2 with weak justification, or score of 4 with thin reasoning) for human review
 - A new `confidence_flag` field on `ScoredPair` in `src/schemas.py` to capture the self-check result
 - The dashboard updated to show the confidence flag where present
@@ -252,7 +252,7 @@ These are optional additions that close specific gaps against the JD. They run a
 - Day 8's logistic regression baseline is complete
 
 **Scope:**
-- Add `torch` to `requirements.txt`. `scikit-learn` is already present from Day 8.
+- Add `torch` to `requirements-pipeline.txt`. `scikit-learn` is already present from Day 8.
 - Build `src/pytorch_baseline.py` with a small MLP (one hidden layer, dropout, nothing fancy). Train on the same cached embeddings the Day 8 logistic regression uses (signal_embedding + system_embedding + element-wise product) plus the human labels from the eval set. Use the same cross-validation strategy as Day 8 (leave-one-out or 5-fold).
 - The logistic regression from Day 8 stays as-is. The PyTorch MLP is a new, additional comparison arm.
 - Both classifiers produce `ScoredPair` objects with the same interface as the LLM judge. Same inputs (retriever output), same labels, different scorer.

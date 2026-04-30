@@ -15,7 +15,7 @@ Confirm these exist before starting:
 
 ## What to build
 
-1. **Add `langgraph` to `requirements.txt`.** This is the only new dependency.
+1. **Add `langgraph` to `requirements-pipeline.txt`.** This is the only new dependency.
 
 2. **Refactor `src/scoring.py`** to implement the scorer as a LangGraph graph with two nodes:
 

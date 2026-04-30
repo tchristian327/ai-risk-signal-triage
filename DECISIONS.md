@@ -83,6 +83,14 @@ New decisions get appended to the bottom with a date. Do not edit old entries �
 
 ---
 
+## 2026-04-09 — AIID data source: Algolia search index, not GraphQL
+
+**Decision:** Pull AIID signals from their public Algolia search index rather than the GraphQL API.
+
+**Why:** The GraphQL endpoint returns 403 for non-browser origins. The Algolia index is the same data, exposed via publicly distributed keys in AIID's own repo, and is the same source AIID's own website uses. Signals are report-level (one incident can have multiple news reports); we deduplicate on `incident_id` and take the first English report. This means signal titles are news headlines rather than official incident titles, which is acceptable and arguably preferable for embedding-based retrieval (richer semantic content).
+
+---
+
 ## 2026-04-12 — AWS Bedrock as the primary LLM access path
 
 **Decision:** Call Claude through AWS Bedrock (`boto3` with the `bedrock-runtime` Converse API) as the primary client. Keep the direct `anthropic` SDK as an optional local fallback controlled by the `LLM_PROVIDER` env var.
@@ -96,14 +104,6 @@ New decisions get appended to the bottom with a date. Do not edit old entries �
 **Decision:** Add a post-Day-10 production hygiene pass covering per-call LLM observability, a Dockerfile, and a GitHub Actions CI workflow.
 
 **Why:** The JD calls out "CI/CD pipelines, containerization (Docker), observability tools, and cloud security practices" as preferred qualifications. These artifacts exist to demonstrate those signals, not because the project needs them to function. Bundling them into a single day after the core data science work is complete keeps them from interfering with the scoring, eval, and iteration work that is the project's actual substance.
-
----
-
-## 2026-04-09 — AIID data source: Algolia search index, not GraphQL
-
-**Decision:** Pull AIID signals from their public Algolia search index rather than the GraphQL API.
-
-**Why:** The GraphQL endpoint returns 403 for non-browser origins. The Algolia index is the same data, exposed via publicly distributed keys in AIID's own repo, and is the same source AIID's own website uses. Signals are report-level (one incident can have multiple news reports); we deduplicate on `incident_id` and take the first English report. This means signal titles are news headlines rather than official incident titles, which is acceptable and arguably preferable for embedding-based retrieval (richer semantic content).
 
 ---
 
@@ -205,3 +205,30 @@ exposed the next calibration problem.
 **Implication for Day 6:** Stratified sampling on cosine similarity (per plan) is still correct, but the resulting eval set may be label-heavy in the 3-4 bucket and label-thin in the 2 bucket. If the labeled eval ends up concentrated at the extremes, the off-by-one and confusion-matrix metrics will be less informative in the middle of the rubric. Worth watching during labeling — if the score-2 bucket is visibly underrepresented, note it in `LABELING_NOTES.md` rather than trying to rebalance mid-labeling.
 
 Not taking action now. Logged so the Day 7 report can reference this when interpreting metrics.
+
+---
+
+## 2026-04-21 — Eval sampling uses equal-rank terciles, not equal-width value buckets
+
+**Decision:** `select_eval_pairs` in `src/eval_sampling.py` stratifies the 468-pair similarity list by index position (equal-rank terciles: indices 0-155 high, 156-311 medium, 312-467 low), not by equal-width cosine value buckets.
+
+**Why:** The cosine similarity distribution across all pairs is tight, roughly 0.25-0.53. Equal-width value buckets (e.g., 0.25-0.34 / 0.34-0.43 / 0.43-0.53) would produce skewed strata because the distribution is not uniform across that range. Equal-rank terciles guarantee 16-17 candidates per stratum regardless of distribution shape. The high/medium/low labels remain meaningful relative to what the retriever actually produces — high means "top third of cosine scores this retriever assigned," which is the operationally relevant comparison.
+
+---
+
+## 2026-04-29 — Governance signal URL audit: fix vs. remove criteria
+
+**Decision rule:**
+- Never remove a signal whose ID appears in `pairs_to_label.json` or `labeled_pairs.json`. The labeling script looks up signals by ID and will crash on a missing reference. URL, title, description, and date can be corrected freely, but the ID and the signal's existence must be preserved.
+- For signals not in the eval set: remove if the specific document cannot be verified after a reasonable search. Fix the URL in place if the underlying event or document is real but the URL is wrong.
+- If governance signals are ever added or regenerated, run live URL verification before adding them to the file. Initial curation used real events as source material but produced some incorrect URLs and at least one wrong date — do not assume URL accuracy without checking.
+
+**What triggered this:** Two broken URLs surfaced mid-labeling at pair 39, prompting a full audit of all 18 governance signal URLs.
+
+**What was found and applied:**
+- 9 URLs fixed in place
+- gov-004 removed (specific California DOI bulletin on credit scores + COVID could not be verified as existing; was not in `pairs_to_label.json`)
+- gov-009 title and description corrected (called a "report"; was actually an ANPR)
+- gov-018 date corrected (was 2023-03-21; actual publication was 2021-01-28 — a 26-month metadata error despite correct substance)
+
+Signal dates can have metadata errors even when the substance is right; interpret signal-date patterns in the eval with that caveat.

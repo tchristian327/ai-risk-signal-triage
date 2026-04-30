@@ -19,7 +19,7 @@ Confirm these exist before starting:
 
 ## What to build
 
-1. **Add `torch` to `requirements.txt`.** `scikit-learn` is already present from Day 8.
+1. **Add `torch` to `requirements-pipeline.txt`.** `scikit-learn` is already present from Day 8.
 
 2. **Build `src/pytorch_baseline.py`** with:
 
