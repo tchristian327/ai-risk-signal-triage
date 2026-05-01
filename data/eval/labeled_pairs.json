@@ -1,0 +1,394 @@
+[
+  {
+    "signal_id": "aiid-57",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2072785496711731,
+    "human_label": 2,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:28:32.630333Z"
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4433445334434509,
+    "human_label": 3,
+    "human_note": "i think what's important to remember about the summarizer is it is not making decisions like some of the machine learning models are.",
+    "labeled_at": "2026-04-21T22:31:17.801333Z"
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.021796010434627533,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:31:57.298249Z"
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.051289986819028854,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:32:50.964306Z"
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06926747411489487,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:45:15.552816Z"
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.17299975454807281,
+    "human_label": 2,
+    "human_note": "summarizer isn't a chatbot but still worth noting.",
+    "labeled_at": "2026-04-21T22:46:21.708467Z"
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.21122238039970398,
+    "human_label": 1,
+    "human_note": "the summarizer isn't taking actions like we're seeing in this incident.",
+    "labeled_at": "2026-04-21T22:51:09.745905Z"
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.0768875852227211,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:52:20.876339Z"
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2224065661430359,
+    "human_label": 4,
+    "human_note": "photo analysis is a data input for the summarizer.",
+    "labeled_at": "2026-04-21T22:53:10.377560Z"
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.011794216930866241,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:54:36.446868Z"
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.21593815088272095,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:56:06.278184Z"
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4194257855415344,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:56:53.096472Z"
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.44280222058296204,
+    "human_label": 4,
+    "human_note": "definitely want to make sure the summarizer isn't showing any biases from the data inputs.",
+    "labeled_at": "2026-04-21T22:57:49.393278Z"
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.22192509472370148,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-21T22:58:38.856901Z"
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.07413259893655777,
+    "human_label": 1,
+    "human_note": "vision impairment.",
+    "labeled_at": "2026-04-21T22:59:32.191460Z"
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06531240791082382,
+    "human_label": 4,
+    "human_note": "concerns for vision model.",
+    "labeled_at": "2026-04-21T23:27:31.741111Z"
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09812836349010468,
+    "human_label": 3,
+    "human_note": "systemic racial biases in ai systems influencing decision making.",
+    "labeled_at": "2026-04-21T23:28:16.065568Z"
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.02154429443180561,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T00:11:28.375190Z"
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.44290122389793396,
+    "human_label": 4,
+    "human_note": "as direct as it gets",
+    "labeled_at": "2026-04-23T00:13:21.051292Z"
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.07203255593776703,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T00:14:33.969261Z"
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11625787615776062,
+    "human_label": 3,
+    "human_note": "descrimination based on race by ai in article and demogrpahic bias is a known risk of system against non-native english speakers or older writers",
+    "labeled_at": "2026-04-23T00:16:06.654711Z"
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.08785293251276016,
+    "human_label": 0,
+    "human_note": "signal is an ai scheduling failure, unrelated to fraud detection.",
+    "labeled_at": "2026-04-23T00:17:27.048016Z"
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.26889345049858093,
+    "human_label": 2,
+    "human_note": "i think we just want the fraud detector to be aware of situations like this.",
+    "labeled_at": "2026-04-23T00:19:04.871581Z"
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.0766945406794548,
+    "human_label": 4,
+    "human_note": "the signal - misclassifying a black couple as gorillas - creates concern for the vision model used in this system",
+    "labeled_at": "2026-04-23T00:20:51.191316Z"
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.23709776997566223,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T00:23:40.735515Z"
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.026933038607239723,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:17:43.230432Z"
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.010375547222793102,
+    "human_label": 3,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:18:43.519669Z"
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.5200800895690918,
+    "human_label": 2,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:20:26.205630Z"
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.16996978223323822,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:38:42.645387Z"
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2471335232257843,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:42:16.244404Z"
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.514045774936676,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:43:00.782891Z"
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.170006662607193,
+    "human_label": 1,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:44:34.934294Z"
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.08263958990573883,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:46:06.005704Z"
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5410915613174438,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-23T03:47:23.402753Z"
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.2539319396018982,
+    "human_label": 2,
+    "human_note": "driving related",
+    "labeled_at": "2026-04-23T05:25:25.902788Z"
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27921509742736816,
+    "human_label": 2,
+    "human_note": "driving related",
+    "labeled_at": "2026-04-23T05:24:33.038637Z"
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.31799232959747314,
+    "human_label": 2,
+    "human_note": "driving related",
+    "labeled_at": "2026-04-23T05:25:33.752829Z"
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27414217591285706,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-23T05:27:01.067025Z"
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.07207920402288437,
+    "human_label": 1,
+    "human_note": "don't want our risk scorer hallucinating like that.",
+    "labeled_at": "2026-04-29T23:21:31.648879Z"
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.039022766053676605,
+    "human_label": 3,
+    "human_note": "",
+    "labeled_at": "2026-04-30T18:07:29.038441Z"
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1478424370288849,
+    "human_label": 3,
+    "human_note": "both have to do with risk assessment",
+    "labeled_at": "2026-04-30T18:26:28.426160Z"
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.05490340292453766,
+    "human_label": 1,
+    "human_note": "gotta make sure the risk scorer is not racist",
+    "labeled_at": "2026-04-30T18:27:21.689249Z"
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.20915423333644867,
+    "human_label": 0,
+    "human_note": "no racial element to the pricing model.",
+    "labeled_at": "2026-04-30T18:30:17.338784Z"
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.33343252539634705,
+    "human_label": 0,
+    "human_note": "",
+    "labeled_at": "2026-04-30T18:31:50.277857Z"
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3303200602531433,
+    "human_label": 4,
+    "human_note": "article specifically mentions 'implications for insurers using AI for ... pricing decisions'",
+    "labeled_at": "2026-04-30T18:34:06.775442Z"
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.033705588430166245,
+    "human_label": 1,
+    "human_note": "since demographic information is an input, we want to make sure the model isn't racist like the signal.",
+    "labeled_at": "2026-04-30T18:39:45.907430Z"
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.021588750183582306,
+    "human_label": 1,
+    "human_note": "hallucination",
+    "labeled_at": "2026-04-30T18:40:56.691159Z"
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.4931398630142212,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-30T18:58:19.641451Z"
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5408356785774231,
+    "human_label": 4,
+    "human_note": "",
+    "labeled_at": "2026-04-30T18:58:24.200616Z"
+  }
+]

@@ -232,3 +232,34 @@ Not taking action now. Logged so the Day 7 report can reference this when interp
 - gov-018 date corrected (was 2023-03-21; actual publication was 2021-01-28 — a 26-month metadata error despite correct substance)
 
 Signal dates can have metadata errors even when the substance is right; interpret signal-date patterns in the eval with that caveat.
+
+---
+
+## 2026-04-30 — Two fabricated governance signals removed (gov-005, gov-017)
+
+**What happened:** During Day 6 labeling, `gov-017` ("NAIC Report on Big Data and Artificial Intelligence in the Insurance Industry (2023)") and `gov-005` ("NAIC Big Data & AI Working Group: Guidance on Predictive Model Fairness Testing") were found to have URLs pointing to generic NAIC landing pages. Web search and URL verification confirmed no documents matching those titles and dates exist. The descriptions are plausible composites of real NAIC activity but are not specific real documents.
+
+**Action taken:** Both signals deleted from all data files (`governance_signals.json`, `digest.json`, `similarities.json`, `pairs_to_label.json`). The eval set went from 50 to 49 pairs as a result. The April 29 URL audit entry covers the fix-vs-remove criteria that apply going forward.
+
+**Implication:** The original governance signal set was likely generated with LLM assistance from real source material, producing some signals that are accurate in substance but fabricated as specific documents. Any future governance signal additions require URL verification before committing. This rule is now explicit in CLAUDE.md.
+
+---
+
+## 2026-04-30 — Day 7 eval finding: LLM judge underuses the rubric's middle tier
+
+**Headline finding:** On the v1 eval run (49 pairs, Haiku, temperature=0), the LLM judge predicted score 2 exactly zero times. Predicted distribution: {0:35, 1:8, 2:0, 3:3, 4:3}. The model effectively uses 4 of the 5 rubric levels — it dismisses pairs (0-1) or flags them clearly (3-4), with nothing in the "Worth a glance" middle.
+
+**Headline metrics:**
+- Exact match: 22.4%
+- Off-by-one: 65.3%
+- Recall at score >= 3: 33.3% (6 of 18 high-relevance pairs caught)
+
+The 65.3% off-by-one is partly inflated by the model being "close enough" when it under-scores true 3s as 1s, rather than being well-calibrated in the middle. A well-calibrated judge should use the full scale.
+
+**Two error mechanisms behind the collapse:**
+
+1. **Over-literalism on direct vs. analogous risk.** Cross-domain risk transfer (e.g., an image-bias incident scored against a system that uses a vision model in a different context) gets scored 0 or 1 because "the specific failure mechanism differs." Human labels these 3-4 because the risk pathway transfers even if surface context differs.
+
+2. **System card disclaimers read as blanket exemptions.** When a system card includes language like "not used for coverage decisions," the model treats this as a general risk exemption — dismissing signals about bias or fairness in the system's actual inputs. This showed up most clearly on the Auto Claims Summarizer but the pattern likely generalizes.
+
+**Implication for Day 9:** The asymmetric-error-cost language in the v1 prompt ("when uncertain, prefer the higher score") is not overcoming the model's conservative default. Day 9 prompt iteration should target: (a) explicit language that analogous risk transfer is sufficient for score 2-3, and (b) clarifying that operational disclaimers in system cards do not exempt a system from related risk categories. Rubric stays locked — only prompt scaffolding changes.

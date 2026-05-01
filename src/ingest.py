@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 import ssl
 import urllib.request
 from pathlib import Path
 
 import certifi
+import requests
 
 from src.schemas import Signal
 
@@ -23,11 +25,17 @@ _ALGOLIA_URL = (
     f"/1/indexes/{_ALGOLIA_INDEX}/query"
 )
 
-# Attributes we actually need — avoids pulling the full text of every news article.
+# Attributes fetched from Algolia. `text` is the full article body (~3-6KB) and
+# is used to build Signal.full_text (a 2-3 sentence extract for the labeling UI).
+# `description` is the short article meta-description (~100-200 chars) and is
+# retained as-is for display and backwards compatibility.
+_GRAPHQL_URL = "https://incidentdatabase.ai/api/graphql"
+
 _ATTRIBUTES = [
     "incident_id",
     "title",
     "description",
+    "text",
     "incident_date",
     "url",
     "classifications",
@@ -146,7 +154,8 @@ def fetch_aiid_signals(output_path: Path, max_signals: int = 60) -> list[Signal]
         if page >= nb_pages:
             break
 
-    signals = [_normalize(h) for h in candidates]
+    incident_desc_lookup = _fetch_incident_descriptions([h["incident_id"] for h in candidates])
+    signals = [_normalize(h, incident_desc_lookup) for h in candidates]
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w") as f:
@@ -156,21 +165,85 @@ def fetch_aiid_signals(output_path: Path, max_signals: int = 60) -> list[Signal]
     return signals
 
 
-def _normalize(hit: dict) -> Signal:
+def _fetch_incident_descriptions(incident_ids: list[int]) -> dict[int, str]:
+    """Batch-fetch curator descriptions from the AIID GraphQL API.
+
+    Returns a dict mapping incident_id -> description. On any failure (network,
+    bad response, unexpected shape), logs a warning and returns an empty dict so
+    the rest of ingestion can proceed with incident_description="".
+    """
+    query = """
+    query($ids: [Int!]) {
+      incidents(filter: { incident_id: { IN: $ids } }) {
+        incident_id
+        description
+      }
+    }
+    """
+    try:
+        resp = requests.post(
+            _GRAPHQL_URL,
+            json={"query": query, "variables": {"ids": incident_ids}},
+            timeout=30,
+        )
+        if not resp.ok:
+            logger.info(
+                "AIID GraphQL endpoint returned %s; incident_description will be empty for AIID "
+                "signals. See FUTURE_WORK.md.",
+                resp.status_code,
+            )
+            return {}
+        incidents = resp.json().get("data", {}).get("incidents", [])
+        return {inc["incident_id"]: inc.get("description", "") for inc in incidents}
+    except Exception as exc:
+        logger.info(
+            "AIID GraphQL request failed (%s); incident_description will be empty for AIID "
+            "signals. See FUTURE_WORK.md.",
+            exc,
+        )
+        return {}
+
+
+def _normalize(hit: dict, incident_desc_lookup: dict[int, str] | None = None) -> Signal:
     """Map an Algolia hit (report-level) to a Signal (incident-level)."""
     iid = hit["incident_id"]
-    # Extract human-readable tags from CSET classification strings like "CSET:Sector:Finance"
     tags = _extract_tags(hit.get("classifications", []))
+    raw_text = hit.get("text", "")
+    raw_desc = hit.get("description", "")
+    incident_desc = (incident_desc_lookup or {}).get(iid, "")
 
     return Signal(
         id=f"aiid-{iid}",
         title=hit.get("title", "").strip(),
-        description=hit.get("description", "").strip(),
+        description=raw_desc.strip(),
+        full_text=_first_sentences(raw_text) if raw_text else raw_desc.strip(),
+        incident_description=incident_desc,
         date=hit.get("incident_date", ""),
         source="AI Incident Database",
         source_url=f"https://incidentdatabase.ai/cite/{iid}",
         tags=tags,
     )
+
+
+def _first_sentences(text: str, max_chars: int = 1000) -> str:
+    """Accumulate complete sentences up to max_chars.
+
+    Adds sentences one at a time and stops before exceeding max_chars.
+    Always returns at least one complete sentence regardless of its length,
+    so output never ends mid-sentence. Returns "" for empty input.
+    """
+    if not text:
+        return ""
+    sentences = re.split(r"(?<=[.!?])\s+(?=[A-Z])", text.strip())
+    result = ""
+    for sent in sentences:
+        if not result:
+            result = sent  # always include at least one sentence
+        elif len(result) + 1 + len(sent) > max_chars:
+            break
+        else:
+            result = result + " " + sent
+    return result
 
 
 def _extract_tags(classifications: list[str]) -> list[str]:

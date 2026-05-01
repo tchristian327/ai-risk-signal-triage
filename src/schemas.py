@@ -24,6 +24,12 @@ class Signal(BaseModel):
     source: str
     source_url: str
     tags: list[str]
+    # Full article text (AIID only). Empty string for governance signals and
+    # legacy records. Used in the labeling UI; not used by the retriever.
+    full_text: str = ""
+    # Incident-level curator description from the AIID GraphQL API (AIID only).
+    # More authoritative than the Algolia article description; used in labeling UI.
+    incident_description: str = ""
 
 
 class SimilarityPair(BaseModel):
@@ -97,3 +103,12 @@ class Digest(BaseModel):
     systems: list[AISystem]
     signals: list[Signal]
     scored_pairs: list[ScoredPair]
+
+
+class LabeledPair(BaseModel):
+    signal_id: str
+    system_id: str
+    cosine_similarity: float
+    human_label: int = Field(..., ge=0, le=4)
+    human_note: str = ""
+    labeled_at: datetime

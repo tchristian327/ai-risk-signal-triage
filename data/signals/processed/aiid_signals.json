@@ -14,7 +14,9 @@
       "Psychological harm",
       "Food and agriculture",
       "Starbucks"
-    ]
+    ],
+    "full_text": "For Starbucks (SBUX) barista Kylei Weisse, working at the coffee chain helps him secure health insurance and some extra money while he studies at Georgia Perimeter College. What it doesn't provide is the kind of stable schedule that the company promised its workers last year.\n\n\"It's the wild inconsistency\" of the hours that's a problem, Weisse, 32, said. \"We're supposed to get them 10 days in advance, which often happens, but there's no guarantee. If our manager doesn't get it to us on time, we just have to deal with it.\"\n\nThat became a problem recently when Weisse's manager gave him only a few days notice on his work hours, which ended up conflicting with an anatomy and physiology exam at his college. Weisse ended up paying another worker $20 to take his shift so he could take the exam.",
+    "incident_description": ""
   },
   {
     "id": "aiid-149",
@@ -23,7 +25,9 @@
     "date": "2021-11-02",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/149",
-    "tags": []
+    "tags": [],
+    "full_text": "In February, Zillow appeared so confident in its ability to use artificial intelligence to estimate the value of homes that it announced a new option: for certain homes, its so-called \"Zestimate\" would also represent an initial cash offer from the company to purchase the property. The move, touted by a company exec at the time as \"an exciting advancement,\" was intended to streamline the process for homeowners considering selling to Zillow as part of its home-flipping business. Zillow promoted this option as a way to make it convenient to sell a home while minimizing interactions with others during the pandemic. Just eight months later, however, the company is shutting down that business, Zillow Offers, entirely. The decision, announced last week, marks a stunning defeat for Zillow. The real estate listing company took a $304 million inventory write-down in the third quarter, which it blamed on having recently purchased homes for prices that are higher than it thinks it can sell them.",
+    "incident_description": ""
   },
   {
     "id": "aiid-204",
@@ -32,7 +36,9 @@
     "date": "2022-02-11",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/204",
-    "tags": []
+    "tags": [],
+    "full_text": "Recently, a system that can monitor employee turnover tendency and sabotage has sparked heated discussions. Zhihu is accused of using the system to monitor employee turnover intention. On February 14, Zhihu told Nandu reporters that Zhihu had never installed and used the behavioral perception system mentioned on the Internet, and would not use similar software tools in the future. For the screenshots of the system on the Internet, Zhihu has never touched it, so it is not clear whether it is true. After verification, it was found that the source of the incident was that a KOL posted a screenshot of a software system suspected of monitoring employee resignation on the Internet, which was misinterpreted by some people and associated with Zhihu. Zhihu said that recently, it has noticed some media reports that \"the company monitors employee behavior perception system\", and some sources believe that Zhihu uses this system.",
+    "incident_description": ""
   },
   {
     "id": "aiid-1",
@@ -65,7 +71,9 @@
       "YouTube",
       "Google",
       "YouTube"
-    ]
+    ],
+    "full_text": "Recent news stories and blog posts highlighted the underbelly of YouTube Kids, Google's children-friendly version of the wide world of YouTube. While all content on YouTube Kids is meant to be suitable for children under the age of 13, some inappropriate videos using animations, cartoons, and child-focused keywords manage to get past YouTube's algorithms and in front of kids' eyes. Now, YouTube will implement a new policy in an attempt to make the whole of YouTube safer: it will age-restrict inappropriate videos masquerading as children's content in the main YouTube app. The reasoning behind this decision has to do with the relationship between the main YouTube app and YouTube Kids (which has its own dedicated app). Before any video appears in the YouTube Kids app, it's filtered by algorithms that are supposed to identify appropriate children's content and content that could be inappropriate or in violation of any YouTube policies.",
+    "incident_description": ""
   },
   {
     "id": "aiid-229",
@@ -74,7 +82,9 @@
     "date": "2018-04-23",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/229",
-    "tags": []
+    "tags": [],
+    "full_text": "There is bestiality on YouTube, and it's surprisingly easy to find. It's also surprisingly prevalent, but not in videos \u2014 in video thumbnails, some of which have racked up millions of views. Search YouTube for \"girl and her horse\" and the platform will return more than 12 million results. Among the first 20 results are four videos promoted with thumbnails of women seemingly engaged in sexual acts with horses. The top search return for the query? A video titled \"Fantastic Girl and Her Horse in My Village\" promoted with a half-blurred thumbnail of a woman being mounted by a horse with an erection. Created by an account called \"SC Today,\" the video has amassed nearly 35,000 views in the four weeks it's been on YouTube. The \"Fantastic Girl and Her Horse in My Village\" video itself does not feature any bestiality. It's largely footage of a woman bathing and brushing a horse.",
+    "incident_description": ""
   },
   {
     "id": "aiid-144",
@@ -83,7 +93,9 @@
     "date": "2021-02-19",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/144",
-    "tags": []
+    "tags": [],
+    "full_text": "YouTube's overeager AI might have misinterpreted a conversation about chess as racist language. Last summer, a YouTuber who produces popular chess videos saw his channel blocked for including what the site called 'harmful and dangerous' content. YouTube didn't explain why it had blocked Croatian chess player Antonio Radic, also known as 'Agadmator,' but service was restored 24 hours later. Computer scientists at Carnegie Mellon suspect Radic's discussion of 'black vs. white' with a grandmaster accidentally triggered YouTube's AI filters. Running simulations with software trained to detect hate speech, they found more than 80 percent of chess videos flagged for hate speech lacked any\u2014but did include terms like 'black,' 'white,' 'attack' and 'threat.'\n\nThe researchers suggest social-media platforms incorporate chess language into their algorithms to prevent further confusion.",
+    "incident_description": ""
   },
   {
     "id": "aiid-13",
@@ -124,7 +136,9 @@
       "Information and communication",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "Last month, I wrote a blog post warning about how, if you follow popular trends in NLP, you can easily accidentally make a classifier that is pretty racist. To demonstrate this, I included the very simple code, as a \u201ccautionary tutorial\u201d. The post got a fair amount of reaction. Much of it positive and taking it seriously, so thanks for that. But eventually I heard from some detractors. Of course there were the fully expected \u201cI\u2019m not racist but what if racism is correct\u201d retorts that I knew I\u2019d have to face. But there were also people who couldn\u2019t believe that anyone does NLP this way. They said I was talking about a non-problem that doesn\u2019t show up in serious machine learning, or projecting my own bad NLP ideas, or something. Well. Here\u2019s Perspective API, made by an offshoot of Google. They believe they are going to use it to fight \u201ctoxicity\u201d online. And by \u201ctoxicity\u201d they mean \u201csaying anything with negative sentiment\u201d.",
+    "incident_description": ""
   },
   {
     "id": "aiid-17",
@@ -156,7 +170,9 @@
       "Information and communication",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "How do you feel about Gmail\u2019s new Smart Reply tool? We\u2019re hearing mixed reports. On one hand it\u2019s super handy to be able to tap/click that \u201cThank you so much!\u201d button when you\u2019re in a rush. However, users are reporting the suggestions aren\u2019t always on the money. People are seeing \u201cSent from my iPhone\u201d as a suggested reply, while others have spied \u201cI love you\u201d in the \u2018smart\u2019 replies field. Man, that could be an awkward way for your office crush to find out about it, huh? Also, and perhaps more pertinently, the fact Google knows what a suitable response could include is creepy as hell. It\u2019s an effective punch in the face from Google that says \u201cwe\u2019re reading your emails\u201d. We all know it happens, but come on\u2026\n\nRelated: Best smartphone 2018\n\nThe inaccuracies and the stalker-ish elements have enough folks wanting out. On mobile this is possible by accessing Settings and switching off the \u201cSmart Reply\u201d toggle switch.",
+    "incident_description": ""
   },
   {
     "id": "aiid-11",
@@ -190,7 +206,9 @@
       "Public administration and defence",
       "Northpointe",
       "Northpointe"
-    ]
+    ],
+    "full_text": "Open up the photo app on your phone and search \u201cdog,\u201d and all the pictures you have of dogs will come up. This was no easy feat. Your phone knows what a dog \u201clooks\u201d like. This modern-day marvel is the result of machine learning, a form of artificial intelligence. Programs like this comb through millions of pieces of data and make correlations and predictions about the world. Their appeal is immense: Machines can use cold, hard data to make decisions that are sometimes more accurate than a human\u2019s. But machine learning has a dark side. If not used properly, it can make decisions that perpetuate the racial biases that exist in society. It\u2019s not because the computers are racist. It\u2019s because they learn by looking at the world as the way it is, not as it ought to be. Recently, newly elected Rep. Alexandria Ocasio-Cortez (D-NY) made this point in a discussion at a Martin Luther King Jr.",
+    "incident_description": ""
   },
   {
     "id": "aiid-119",
@@ -199,7 +217,9 @@
     "date": "2021-08-03",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/119",
-    "tags": []
+    "tags": [],
+    "full_text": "Russian payment services company Xsolla has fired 150 employees at once. What caused controversy wasn\u2019t the staff reduction itself but the CEO\u2019s letter, in which he tried to explain the reason behind this decision. The email written by Xsolla CEO and founder Aleksandr Agapitov leaked on August 3. At first, some people suspected that it could have been fake, but its authenticity was later confirmed by some local game outlets and the company itself.\n\n150 people were fired from the company\u2019s office in Perm, Russia. Agapitov informed his employees that they were being let go via the letter saying that they have been terminated based on big data analysis of their activity. Here\u2019s the full translation of the email:\n\nYou received this email because my big data team analyzed your activities in Jira, Confluence, Gmail, chats, documents, dashboards and tagged you as unengaged and unproductive employees. In other words, you were not always present at the workplace when you worked remotely.",
+    "incident_description": ""
   },
   {
     "id": "aiid-201",
@@ -208,7 +228,9 @@
     "date": "2020-04-14",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/201",
-    "tags": []
+    "tags": [],
+    "full_text": "A deepfake video showing Belgium\u2019s prime minister speaking of an urgent need to tackle the economic and climate crises has been put into circulation by Extinction Rebellion Belgium.",
+    "incident_description": ""
   },
   {
     "id": "aiid-212",
@@ -217,7 +239,9 @@
     "date": "2021-01-01",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/212",
-    "tags": []
+    "tags": [],
+    "full_text": "BEIJING, December 14 (TMTPOST) \uff0d Chinese EV startup Xpeng Motors has been fined 1000,000 yuan (US$16,000) by the market regulation authority in Shanghai for collecting facial images of customers without consent. Xpeng Motors reportedly collected 431,623 images of its customers by using surveillance cameras with facial recognition functions without prior consent from the customers.\n\n\u201cOur outlets in Shanghai wanted to collect and analyze the data of customer traffic to optimize our operation and better serve the customers,\u201d Xpeng Motors told TMTPost. \u201cBecause of the lack of familiarity with the law, we made wrong judgments and procured services that violate relevant laws and regulations from a third-party supplier (Ulucu).\u201d\n\nXpeng Motors said that they had already conducted internal evaluations and removed all data-collecting devices before Shanghai Market Regulation Department\u2019s inspection on March 18.",
+    "incident_description": ""
   },
   {
     "id": "aiid-74",
@@ -254,7 +278,9 @@
       "Public administration and defence",
       "DataWorks Plus",
       "DataWorks Plus"
-    ]
+    ],
+    "full_text": "A Michigan man has sued Detroit police after he was wrongfully arrested and falsely identified as a shoplifting suspect by the department\u2019s facial recognition software in one of the first lawsuits of its kind to call into question the controversial technology\u2019s risk of throwing innocent people in jail. Robert Williams, a 43-year-old father in the Detroit suburb of Farmington Hills, was arrested last year on charges he\u2019d taken watches from a Shinola store after police investigators used a facial recognition search of the store\u2019s surveillance-camera footage that identified him as the thief. Prosecutors dropped the case less than two weeks later, arguing that officers had relied on insufficient evidence. Police Chief James Craig later apologized for what he called \u201cshoddy\u201d investigative work. Williams, who said he had been driving home from work when the 2018 theft had occurred, was interrogated by detectives and held in custody for 30 hours before his release.",
+    "incident_description": ""
   },
   {
     "id": "aiid-6",
@@ -296,7 +322,9 @@
       "Microsoft",
       "Microsoft",
       "Twitter"
-    ]
+    ],
+    "full_text": "Many people associate innovation with technology, but advancing technology is subject to the same embarrassing blunders that humans are. Nowhere is this more apparent than in chatbots. The emerging tech, which seems to be exiting the awkward middle school phase of its evolution, has left a long line of fails behind it that would be criminal not to address (and enjoy). These computer programs are designed to simulate human interactions with customers and web surfers, but they aren't foolproof. From Poncho consistently ignoring requests for a weather forecast to an unnerving inspirational bot, enjoying the absurdity of chatbots means appreciating the beauty of where randomness and data meet.",
+    "incident_description": ""
   },
   {
     "id": "aiid-69",
@@ -314,7 +342,9 @@
       "Severe",
       "Harm to physical health/safety",
       "SKH Metals Factory"
-    ]
+    ],
+    "full_text": "A man has been killed by a robot at a car parts factory in India. The 24-year-old worker was reportedly adjusting a metal sheet being welded by the machine when he was stabbed by one of its arms. Ramji Lal, from Uttar Pradesh, had been working at a SKH Metals factory in Manesar for around 18 months when the accident",
+    "incident_description": ""
   },
   {
     "id": "aiid-24",
@@ -332,7 +362,9 @@
       "Harm to physical health/safety",
       "Critical manufacturing",
       "Volkswagen"
-    ]
+    ],
+    "full_text": "A technician has died from injuries inflicted by a robot at a Volkswagen (vlkpy) plant near Kassel, Germany. The technician was in the process of installing the robot with a colleague when he was struck in the chest by it and pressed against a metal plate, according to the Financial Times. The technician later died from the injuries. Volkswagen keeps this type of robot in safety cages to prevent accidents like this one, but in this case, the technician was standing inside the cage to work on the installation. The other technician was outside the cage and was not harmed. Volkswagen also uses new lightweight robots that work alongside workers at the plant, though the company emphasized to the Financial Times that this was not one of those robots. It also said that the robot did not have a technical defect.",
+    "incident_description": ""
   },
   {
     "id": "aiid-221",
@@ -341,7 +373,9 @@
     "date": "2022-03-07",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/221",
-    "tags": []
+    "tags": [],
+    "full_text": "Tesla driver admits he was not paying attention while autopilot was engaged. TAIPEI (Taiwan News) \u2014 A Tesla on autopilot collided with a maintenance vehicle on a highway in Taoyuan moments before a worker responding to the accident was fatally struck by a BMW. At 9:51 p.m. on Monday evening (March 8), a 46-year-old man surnamed Chiang (\u6c5f) was seated behind the wheel of a white Tesla with its autopilot feature engaged at the 63-kilometer mark on National Highway 3 near the Daxi Interchange in Taoyuan City, reported UDN. The vehicle's sensors apparently failed to detect a bright yellow road repair truck, despite its large reflectors and digital sign, and slammed into its rear. The Tesla sedan spun across the inner lanes of the freeway, and a 25-year-old worker surnamed Yu (\u4fde) immediately rushed forward and put down traffic cones to alert drivers to the accident.",
+    "incident_description": ""
   },
   {
     "id": "aiid-19",
@@ -374,7 +408,9 @@
       "Google",
       "Google",
       "Instant Checkmate"
-    ]
+    ],
+    "full_text": "Female job seekers are much less likely to be shown adverts on Google for highly paid jobs than men, researchers have found. The team of researchers from Carnegie Mellon built an automated testing rig called AdFisher that pretended to be a series of male and female job seekers. Their 17,370 fake profiles only visited jobseeker sites and were shown 600,000 adverts which the team tracked and analysed. The authors of the study wrote: \u201cIn particular, we found that males were shown ads encouraging the seeking of coaching services for high paying jobs more than females.\u201d\n\nOne experiment showed that Google displayed adverts for a career coaching service for \u201c$200k+\u201d executive jobs 1,852 times to the male group and only 318 times to the female group. Another experiment, in July 2014, showed a similar trend but was not statistically significant. Google\u2019s ad targeting system is complex, taking into account various factors of personal information, browsing history and internet activity.",
+    "incident_description": ""
   },
   {
     "id": "aiid-32",
@@ -405,7 +441,9 @@
       "Information and communication",
       "Apple",
       "Apple"
-    ]
+    ],
+    "full_text": "A worker in the Chinese city of Nanjing claims a colleague has bested the facial recognition technology on her new iPhone X \u2014 twice. The woman, identified only by her surname Yan, told the Jiangsu Broadcasting Corp. that her co-worker was able to get into both phones \u2014 her original as well as the new one Apple gave her as a replacement, reports the South China Morning Post. An Apple spokesman told HuffPost that he couldn\u2019t confirm the details of the story, nor did he have enough information to determine what might have gone wrong with the phones. He suspected that both women may have used the phone during its \u201cpasscode training\u201d and that the phones may have been essentially \u201ctaught\u201d to recognize both faces. The facial recognition software has run into some glitches. It can sometimes mistake twins or siblings, according to Apple.",
+    "incident_description": ""
   },
   {
     "id": "aiid-8",
@@ -439,7 +477,9 @@
       "Uber",
       "Uber",
       "Volvo"
-    ]
+    ],
+    "full_text": "Company insists traffic violations in San Francisco are the result of \u2018human error\u2019 by drivers who can take control if needed, but witness account contradicts this\n\nAn autonomous Uber malfunctioned while in \u201cself-driving mode\u201d and caused a near collision in San Francisco, according to a business owner whose account raises new safety concerns about the unregulated technology launch. The self-driving car \u2013 which Uber introduced without permits, as part of a testing program that California has deemed illegal \u2013 accelerated into an intersection while the light was still red and while the automation technology was clearly controlling the car, said Christopher Koff, owner of local cafe AK Subs. Self-driving cars: Uber's open defiance of California shines light on brazen tactics Read more\n\n\u201cIt looked like the car ran the red light on its own,\u201d Koff, 49, said of the self-driving Uber Volvo, which has a driver in the front seat who can take control when needed.",
+    "incident_description": ""
   },
   {
     "id": "aiid-7",
@@ -469,7 +509,9 @@
       "Information and communication",
       "Wikipedia",
       "Wikipedia"
-    ]
+    ],
+    "full_text": "Wiki Bots That Feud for Years Highlight the Troubled Future of AI\n\nThe behavior of bots is often unpredictable and sometimes leads them to produce errors over and over again in a potentially infinite feedback loop.",
+    "incident_description": ""
   },
   {
     "id": "aiid-15",
@@ -496,7 +538,9 @@
       "Arts, entertainment and recreation",
       "Amazon",
       "Amazon"
-    ]
+    ],
+    "full_text": "It\u2019s all a \u201cglitch\u201d, says Amazon. After a weekend of being bombarded by emails organized by Twitter (we told you it was an important gay political tool!) under the hashtag #amazonfail, the world\u2019s largest online retailer of books is apologizing for de-ranking dozens of gay books by classifying them as \u201cadult literature.\u201d Amazon responded to our requests for more information with a statement that it sent to other reporters:\n\n\u201cWe recently discovered a glitch to our Amazon sales rank feature that is in the process of being fixed. We\u2019re working to correct the problem as quickly as possible.\u201d\n\nAs of the publication of the story, some of the books de-ranked over the weekend, including Paul Monnette\u2019s 1992 National Book Award winner Becoming a Man, have been added back, but many others, including E.M.",
+    "incident_description": ""
   },
   {
     "id": "aiid-103",
@@ -505,7 +549,9 @@
     "date": "2020-09-18",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/103",
-    "tags": []
+    "tags": [],
+    "full_text": "Twitter\u2018s algorithm for automatically cropping images attached to tweets often doesn\u2019t focus on the important content in them. A bother, for sure, but it seems like a minor one on the surface. However, over the weekend, researchers found that the cropping algorithm might have a more serious problem: white bias. Several users posted a lot of photos to show that in an image that has people with different colors, Twitter chooses to show folks with lighter skin after cropping those images to fit its display parameters on its site and embeds. Some of them even tried to reproduce results with fictional characters and dogs. If you tap on these images, you\u2019ll see an uncropped version of the image which includes more details such as another person or character. What\u2019s odd is that even if users flipped the order of where dark-skinned and light-skinned people appeared in the image, the results were the same. However, some people noted that there might be other factors than the color of the skin.",
+    "incident_description": ""
   },
   {
     "id": "aiid-28",
@@ -536,7 +582,9 @@
       "Action",
       "Financial and insurance activities",
       "Navinder Singh Sarao"
-    ]
+    ],
+    "full_text": "At about 2:30pm on May 6, 2010, an asset management firm began executing a series of orders on the Chicago Mercantile Exchange. Located in Overland Park, Kansas, Waddell & Reed was (and is) one of the oldest mutual fund companies in America. It followed a strategy based on fundamental analysis\u2014Wall Street code for old-fashioned investing. That afternoon, it wanted to sell 75,000 futures contracts on the S&P 500, a major market index, before the market closed at 4 p.m. The order was large but basically unremarkable, and Waddell & Reed had been executing similar trades for decades. But this time something was different. Within 20 minutes of Waddell & Reed\u2019s initial order, S&P 500 futures had declined 5 percent, and individual equity prices began to oscillate wildly. The price of the consulting firm Accenture declined from roughly $30 to $0.01 in seven seconds. Consumer goods giant Procter and Gamble dropped from around $60 to $39.",
+    "incident_description": ""
   },
   {
     "id": "aiid-167",
@@ -545,7 +593,9 @@
     "date": "2017-09-07",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/167",
-    "tags": []
+    "tags": [],
+    "full_text": "Michal Kosinski felt he had good reason to teach a machine to detect sexual orientation. An Israeli start-up had started hawking a service that predicted terrorist proclivities based on facial analysis. Chinese companies were developing facial recognition software not only to catch known criminals \u2014 but also to help the government predict who might break the law next. And all around Silicon Valley, where Dr. Kosinski works as a professor at Stanford Graduate School of Business, entrepreneurs were talking about faces as if they were gold waiting to be mined. Few seemed concerned. So to call attention to the privacy risks, he decided to show that it was possible to use facial recognition analysis to detect something intimate, something \u201cpeople should have full rights to keep private.\u201d\n\nAfter considering atheism, he settled on sexual orientation.",
+    "incident_description": ""
   },
   {
     "id": "aiid-226",
@@ -554,7 +604,9 @@
     "date": "2015-04-01",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/226",
-    "tags": []
+    "tags": [],
+    "full_text": "Thomas Nehren never knew what to expect when he was on the road in his hometown of Salt Lake City. Whether it was speed traps, accidents or road construction, he too often found himself on the wrong street at the wrong time, when a different way to work might have kept him away from traffic \u2013 or potentially a ticket. Then he heard about a navigation app called Waze.\n\n\"Waze saves me a few minutes of commute every day, with five days a week and 50 weeks a year, that adds up,\" Nehren says. \"I use Waze to help me find the quickest way out of two or three alternative routes to get to work and back home.\"\n\nA dockless scooter is seen in the streets of Washington D.C. \"Dockless\" refers to the fact that the scooters have self-locking mechanisms, which makes it easier to park them near the user's destination. The app, now about a decade old, functions by collecting map data, travel times and traffic information from users, who can report accidents, traffic jams and police activity.",
+    "incident_description": ""
   },
   {
     "id": "aiid-54",
@@ -586,7 +638,9 @@
       "PredPol",
       "Chicago Police Department",
       "Oakland Police Department"
-    ]
+    ],
+    "full_text": "Image: Gina Ferazzi/Getty\n\nTim Birch was six months into his new job as head of research and planning for the Oakland Police Department when he walked into his office and found a piece of easel pad paper tacked onto his wall. Scribbled across the page were the words, \"I told you so!\"\n\nPaul Figueroa, then the assistant chief of Oakland Police, who sat next door to Birch, was the culprit. A few months before, in the fall of 2014, Birch had attended a national conference for police chiefs where he was introduced to PredPol, a predictive policing software that several major cities across the US have started to use. It can forecast when and where crimes may occur based on prior crime reports, but the results of its impact on crime reduction have been mixed. Birch, a former police officer in Daly City, thought it could help Oakland's understaffed and underfunded police force.",
+    "incident_description": ""
   },
   {
     "id": "aiid-46",
@@ -611,7 +665,9 @@
       "Activities of households as employers",
       "Nest Labs",
       "Google Nest"
-    ]
+    ],
+    "full_text": "ReadWriteHome is an ongoing series exploring the implications of living in connected homes. Nest Labs\u2019 sudden decision Thursday to halt sales of its smart smoke and carbon monoxide detectors surprised users and drew mixed reactions. But what looks at first glance like a black eye was also the sharpest thing the company could have done. CEO Tony Fadell posted an online notice to consumers warning them that its Nest Protect smoke detectors aren\u2019t actually that smart after all. The company discovered a bug in its algorithm for the Nest Wave gesture, a convenience feature designed to let people disable their alarms by waving their hand. The glitch\u2014which only affects the smoke detector, not the company\u2019s flagship Nest thermostat\u2014makes it possible for users to accidentally turn off the alarm, raising safety concerns. See also: Nest Wants To Be The Hub Of The Connected Home\n\nPress reaction has been harsh.",
+    "incident_description": ""
   },
   {
     "id": "aiid-26",
@@ -640,7 +696,9 @@
       "Apple",
       "Bkav",
       "Apple"
-    ]
+    ],
+    "full_text": "When Apple first announced Face ID for the iPhone X, it claimed the new feature was significantly more secure than Touch ID and couldn\u2019t be fooled by even the most realistic of masks. But it turns out that might not be the case. Vietnamese cyber security firm Bkav claims to have already tricked Face ID using a custom-made a mask\u2014but don\u2019t return your iPhone X just yet. Before you freak out, here\u2019s what the news actually means for your smartphone security. Advertisement\n\nHow Bkav Beat Face ID\n\nAccording to Bkav, all you need to make a mask that can trick Face ID is a scan of the person\u2019s face and about $150 worth of materials. Advertisement\n\nThe second part is easy. The mask was made using some sculpted silicon, printer plastic, makeup and paper cutouts. Key areas, like the eyes and mouth, were actually recreated with 2D photos pasted onto the 3D surface.",
+    "incident_description": ""
   },
   {
     "id": "aiid-18",
@@ -671,7 +729,9 @@
       "Information and communication",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "\u201cYou can\u2019t be what you can\u2019t see,\u201d Marie Wilson of the White House Project said back in 2010. According to a new study, Google Images may not be helping to improve the situation. AdView analyzed employment data to determine the number of women in various jobs (baker, call-center worker, CEO), and then calculated the number of women who showed up in Google Image search results for the same roles. While women make up about 28% of chief executives (at least, according to data from the U.S.",
+    "incident_description": ""
   },
   {
     "id": "aiid-142",
@@ -680,7 +740,9 @@
     "date": "2021-02-11",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/142",
-    "tags": []
+    "tags": [],
+    "full_text": "Earlier this year Mighty Well, an adaptive clothing company that makes fashionable gear for people with disabilities, did something many newish brands do: It tried to place an ad for one of its most popular products on Facebook. The product in question was a gray zip-up hoodie ($39.95) with the message: \u201cI am immunocompromised \u2014 Please give me space.\u201d The \u201cimmunocompromised\u201d was in a white rectangle, kind of like Supreme\u2019s red one. It has rave customer reviews on the company\u2019s website\n\nFacebook \u2014 or rather, Facebook\u2019s automated advertising center \u2014 did not like the ad quite so much. It was rejected for violating policy \u2014 specifically, the promotion of \u201cmedical and health care products and services including medical devices,\u201d though it included no such products. Mighty Well appealed the decision, and after some delay, the ruling changed. This may not seem like such a big deal. After all, the story ended well.",
+    "incident_description": ""
   },
   {
     "id": "aiid-16",
@@ -712,7 +774,9 @@
       "Arts, entertainment and recreation",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "Share this on Twitter (Opens in a new window)\n\nShare this on Facebook (Opens in a new window)\n\nShare this on Twitter (Opens in a new window)\n\nShare this on Facebook (Opens in a new window)\n\nGoogle had a major PR disaster on its hands thanks to \"deep learning.\" ( Jacky Alcine/Twitter )",
+    "incident_description": ""
   },
   {
     "id": "aiid-169",
@@ -721,7 +785,9 @@
     "date": "2018-08-15",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/169",
-    "tags": []
+    "tags": [],
+    "full_text": "YANGON, Myanmar \u2013 In April, Facebook founder Mark Zuckerberg told U.S. senators that the social media site was hiring dozens more Burmese speakers to review hate speech posted in Myanmar. The situation was dire. Some 700,000 members of the Rohingya community had recently fled the country amid a military crackdown and ethnic violence. In March, a United Nations investigator said Facebook was used to incite violence and hatred against the Muslim minority group. The platform, she said, had \u201cturned into a beast.\u201d\n\nFour months after Zuckerberg\u2019s pledge to act, here is a sampling of posts from Myanmar that were viewable this month on Facebook:\n\nOne user posted a restaurant advertisement featuring Rohingya-style food. \u201cWe must fight them the way Hitler did the Jews, damn kalars!\u201d the person wrote, using a pejorative for the Rohingya. That post went up in December 2013.",
+    "incident_description": ""
   },
   {
     "id": "aiid-31",
@@ -742,7 +808,9 @@
       "Transportation",
       "Delhi Metro Rail Corporation",
       "Hyuandai Rotem"
-    ]
+    ],
+    "full_text": "About a month after being granted safety approval by the commissioner for Metro Rail Safety (CMRS), an unmanned Delhi Metro train on the yet-to-be-inaugurated Magenta Line derailed, crashing into a wall. The incident happened during a trial run on the line which, once completed, will connect Botanical Garden with Janakpuri West, covering a distance of 38.23km. Delhi Metro Train crashed into the wall. It happened at Kalindi Kunj depo. PM Narendra Modi will inaugurate the Botanical Garden on the Kalkaji Mandir stretch (Magenta Line) on December 25. pic.twitter.com/vyozISos01 \u2014 Shadab Moizee (@shadabmoizee) December 19, 2017\n\nThe first section of the Magenta Line, connecting Botanical Garden with Kalkaji, will be inaugurated by Prime Minister Narendra Modi on December 25. This accident comes at a time when excitement around the new generation driverless trains is rising. However, the latest incident may serve as a setback for now.",
+    "incident_description": ""
   },
   {
     "id": "aiid-49",
@@ -774,7 +842,9 @@
       "Youth Laboratories",
       "Microsoft",
       "Insilico Medicine"
-    ]
+    ],
+    "full_text": "Image: Flickr/Veronica Jauriqui\n\nBeauty pageants have always been political. After all, what speaks more strongly to how we see each other than which physical traits we reward as beautiful, and which we code as ugly? It wasn't until 1983 that the Miss America competition crowned a black woman as the most beautiful woman in the country. So what if we replaced human judges with machines? A robot would ideally lack a human's often harmful social biases. As shallow as the whole thing is, would a computer at least be able to see past skin colour and look at, potentially, more universal markers of attractiveness? Or hell, even appreciate a little melanin? Not really, as it turns out. Beauty.ai, an initiative by the Russia and Hong Kong-based Youth Laboratories and supported by Microsoft and Nvidia, ran a beauty contest with 600,000 entrants, who sent in selfies from around the world\u2014India, China, all over Africa, and the US.",
+    "incident_description": ""
   },
   {
     "id": "aiid-37",
@@ -804,7 +874,9 @@
       "Professional, scientific and technical activities",
       "Amazon",
       "Amazon"
-    ]
+    ],
+    "full_text": "However, bias also appears for other unrelated reasons. A recent study into how an algorithm delivered ads promoting STEM jobs showed that men were more likely to be shown the ad, not because men were more likely to click on it, but because women are more expensive to advertise to. Since companies price ads targeting women at a higher rate (women drive 70% to 80% of all consumer purchases), the algorithm chose to deliver ads more to men than to women because it was designed to optimise ad delivery while keeping costs low. But if an algorithm only reflects patterns in the data we give it, what its users like, and the economic behaviours that occur in its market, isn\u2019t it unfair to blame it for perpetuating our worst attributes? We automatically expect an algorithm to make decisions without any discrimination when this is rarely the case with humans. Even if an algorithm is biased, it may be an improvement over the current status quo.",
+    "incident_description": ""
   },
   {
     "id": "aiid-168",
@@ -813,7 +885,9 @@
     "date": "2022-03-01",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/168",
-    "tags": []
+    "tags": [],
+    "full_text": "If you\u2019re interested in obscure things, there are two reasons why your searches for items and products are likely to be less related to your interests than those of your \u2018mainstream\u2019 peers; either you\u2019re a monetization \u2018edge case\u2019 whose interests will only be catered to if you\u2019re also in the upper categories of economic purchasing power (for example, products and services related to \u2018wealth management\u2019); or the search algorithms that you\u2019re using are leveraging collaborative filtering (CF), which favors the interests of the majority. Since collaborative filtering is cheaper and more established than other potentially more capable algorithms and frameworks, it\u2019s possible that both these cases apply. CF-based search results will prioritize items that are perceived to be popular among \u2018people like you\u2019, as best the host framework can understand what kind of a consumer you are.",
+    "incident_description": ""
   },
   {
     "id": "aiid-55",
@@ -840,7 +914,9 @@
       "Information and communication",
       "Amazon",
       "Amazon"
-    ]
+    ],
+    "full_text": "In this NSFW video, Amazon put the \"X\" in Alexa when a child asked it to play his favorite song. (You'll want to wear headphones for this one, folks.)\n\nJanuary 3, 2017 1 min read\n\nThe description on this YouTube video posted by f0t0b0y reads, \u201cWhy!?!? We just got our new echo dot and this happened!?!?\u201d\n\nNormally we\u2019d say to ease up on the exclamation points, buddy, but in this case, they seem more than warranted. When the child in the video tells Alexa to \u201cplay \u2018Digger, Digger,\u2019\" Alexa answers, \u201cYou want to hear a station for porn detected...hot chick amateur girl sexy.\"\n\nBut Alexa doesn\u2019t stop there, no sir, and rattles off a litany of porn terms that\u2019d make Dirk Diggler blush. Watch (with headphones!) and enjoy the increasing panic you hear in the parents\u2019 voices. On the bright side, we guess moms and dads no longer have to sweat having \u201cthe talk\u201d with their kids\u2014a robot will do your (literal) dirty work for you. Related: Brain Break: This Goat Needs Some Starbucks Baaaaad",
+    "incident_description": ""
   },
   {
     "id": "aiid-20",
@@ -876,7 +952,9 @@
       "Transportation and storage",
       "Tesla",
       "Tesla"
-    ]
+    ],
+    "full_text": "It\u2019s the year 2025. Your driverless car has just crashed into a tree at 55mph because its built-in computer valued a pedestrian\u2019s life above your own. Your injuries are the result of a few lines of code that were hacked out by a 26-year-old software programmer in the San Francisco Bay Area back in the heady days of 2018. As you wait for a paramedic drone, bleeding out by the roadside, you ask yourself \u2013 where did it all go wrong? The above scenario might sound fanciful, but death by driverless car isn\u2019t just inevitable \u2013 it\u2019s already happening. Most recently, an Uber self-driving car hit and killed a pedestrian in Arizona, while in May 2017, semi-autonomous software failed in a similarly tragic way when Joshua Brown\u2019s Tesla Model S drove under the trailer of an 18-wheel truck on a highway while in Autopilot mode. Tesla admits that its system sensors failed to distinguish the white trailer against a bright sky, resulting in the untimely death of the 40-year-old Floridian.",
+    "incident_description": ""
   },
   {
     "id": "aiid-71",
@@ -911,7 +989,9 @@
       "Transportation and storage",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "Valentine's Day was a bummer in Mountain View, Calif. For the first time, one of Google's self-driving cars, a modified Lexus SUV, caused a crash. Detecting a pile of sandbags surrounding a storm drain in its path, the car moved into the center lane to avoid the hazard. Three seconds later it collided with the side of a bus. According to the accident report, the Lexus's test driver saw the bus but assumed the bus driver would slow down to allow the SUV to continue. It was not the project's first crash, but it was the first caused in part by nonhuman error (most incidents involve the driverless cars getting rear-ended by human drivers not paying attention at traffic lights). The episode shines a light on an ever looming gray area in our robotic future: Who is responsible\u2014and pays for damages\u2014when an autonomous vehicle crashes? The sense of urgency to find clear answers to this and other self-driving vehicle questions is growing.",
+    "incident_description": ""
   },
   {
     "id": "aiid-67",
@@ -945,7 +1025,9 @@
       "Transportation and storage",
       "Tesla",
       "Tesla"
-    ]
+    ],
+    "full_text": "Autopilot controls are not yet fully capable of functioning without human intervention \u2013 but they\u2019re good enough to lull us into a false sense of security\n\nWhen California police officers approached a Tesla stopped in the centre of a five-lane highway outside San Francisco last week, they found a man asleep at the wheel. The driver, who was arrested on suspicion of drunk driving, told them his car was in \u201cautopilot\u201d, Tesla\u2019s semi-autonomous driver assist system. In a separate incident this week, firefighters in Culver City reported that a Tesla rear-ended their parked fire truck as it attended an accident on the freeway. Again, the driver said the vehicle was in autopilot. CHP San Francisco (@CHPSanFrancisco) When u pass out behind the wheel on the Bay Bridge with more than 2x legal alcohol BAC limit and are found by a CHP Motor. Driver explained Tesla had been set on autopilot. He was arrested and charged with suspicion of DUI.",
+    "incident_description": ""
   },
   {
     "id": "aiid-34",
@@ -979,7 +1061,9 @@
       "Information and communication",
       "Amazon",
       "Amazon"
-    ]
+    ],
+    "full_text": "Story highlights Amazon Echo Dot's digital assistant delivered when girl asked for a dollhouse and snacks\n\nFamily now requires a four-digit code before anything can be ordered via Alexa\n\n(CNN) It was either a late Christmas present or an unfunny prank. Megan Neitzel couldn't figure out why an expensive dollhouse and four pounds of sugar cookies were delivered to her Dallas home. She didn't order either. Neither had her husband. Then she talked to her 6-year-old daughter, Brooke.\n\n\"The next morning, I asked my daughter and she said, 'I was talking to Alexa about a dollhouse and cookies,' \" Neitzel told CNN affiliate KTVT-TV. Alexa is not a sister or imaginary friend, but the voice-activated digital assistant in Amazon's Echo Dot. Read More",
+    "incident_description": ""
   },
   {
     "id": "aiid-27",
@@ -1011,7 +1095,9 @@
       "Soviet Union",
       "Soviet Union",
       "United States"
-    ]
+    ],
+    "full_text": "Stanislav Petrov, 77, passed away on May 19, 2017. His death in his home in the Moscow suburbs was little noted at the time. Petrov, however, is one of a few humans who can say they literally saved the world. The veteran was a lieutenant colonel of the Soviet Union Air Defense Forces. On Sept. 26, 1983, the Soviets' early-warning nuclear missile detection system was triggered. The system said the United States had fired five ballistic missiles at the Soviet Union. Petrov was the duty officer at the co...",
+    "incident_description": ""
   },
   {
     "id": "aiid-53",
@@ -1042,7 +1128,9 @@
       "Information and communication",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "Gregory Bush is arraigned on two counts of murder and 10 counts of wanton endangerment Thursday, Oct. 25, 2018, in Louisville, Ky. Bush fatally shot two African-American customers at a Kroger grocery store Wednesday and was swiftly arrested as he tried to flee, authorities said Thursday. Photo: Scott Utterback/Courier Journal via AP Pool\n\nTwo black senior citizens were murdered in Louisville, Kentucky, on Thursday. Maurice Stallard, 69, was at a Kroger supermarket when Gregory Bush, a 51-year-old white man, walked in and shot him multiple times. Bush then exited the store and shot Vickie Lee Jones, 67, in the parking lot before an armed bystander reportedly fired back, prompting him to flee.",
+    "incident_description": ""
   },
   {
     "id": "aiid-68",
@@ -1077,7 +1165,9 @@
       "Administrative and support service activities",
       "Knightscope",
       "Knightscope"
-    ]
+    ],
+    "full_text": "When Robot Face-Plants In Fountain, Onlookers Show Humanity \u2014 By Gloating\n\nThe rise of artificial intelligence poses its fair share of dangers. Last year, for instance, physicist Stephen Hawking said its development could be \"either the best or the worst thing ever to happen to humanity.\" And just this weekend, Tesla CEO Elon Musk described AI as a potential \"existential threat\" to human civilization. But for now at least, we can chalk up one win against our future overlords. On Monday, onlookers at an office complex in Washington, D.C., discovered a curious sight: the body of a security robot, floating face-down in a fountain. It was the remains of a Knightscope K5, an autonomous bot able to \"detect unusual activity and report it for humans to investigate,\" according to the company's website. Kristian De Meo of MRP Realty, which manages Washington Harbour, tells All Things Considered the bot was new to the facility.",
+    "incident_description": ""
   },
   {
     "id": "aiid-45",
@@ -1110,7 +1200,9 @@
       "Information and communication",
       "Google",
       "Google"
-    ]
+    ],
+    "full_text": "A recent High Court decision has opened the door to defamation proceedings that could affect search engine providers, as well as other businesses using search engine optimisation to improve their online profile. Search engines have, without question, made access to information much easier and faster. Indeed, without search engines, it would be very difficult to navigate the trillions of internet pages and find meaningful results expeditiously. The algorithms behind search engines like Google are also now so developed that they are able to predict what you are looking for through their auto-complete function. What happens though, if those functions return results that are claimed to be untrue and potentially defamatory?",
+    "incident_description": ""
   },
   {
     "id": "aiid-137",
@@ -1119,7 +1211,9 @@
     "date": "2021-01-11",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/137",
-    "tags": []
+    "tags": [],
+    "full_text": "A tax dispute between a ranch in Israel\u2019s southern Negev desert and the country\u2019s tax authority has given rise to an issue which could have far reaching repercussions on the public\u2019s ability to oversee and even understand government acts. The issue, currently being debated in the Justice Ministry, is whether a software or its source code can be seen as \u201cinformation\u201d the authorities are obliged to disclose to the public. The story began in 2014 when the farm Har Shemesh, which is not part of any community, asked the Tax Authority to explain how it had calculated a fine they were required to pay. The authority officials couldn\u2019t explain how they had arrived at the fine\u2019s final amount, claiming the calculation had been carried out automatically by their computer software. The farm owners asked for more details, eventually requesting the program or it's source code so that they could examine the formula by which their  fine was calculated. However, the Tax Authority refused.",
+    "incident_description": ""
   },
   {
     "id": "aiid-40",
@@ -1148,7 +1242,9 @@
       "Public administration and defence",
       "Equivant",
       "Equivant"
-    ]
+    ],
+    "full_text": "The criminal justice system is becoming automated. At every stage \u2014 from policing and investigations to bail, evidence, sentencing and parole \u2014 computer systems play a role. Artificial intelligence deploys cops on the beat. Audio sensors generate gunshot alerts. Forensic analysts use probabilistic software programs to evaluate fingerprints, faces and DNA. Risk-assessment instruments help to determine who is incarcerated and for how long. Technological advancement is, in theory, a welcome development. But in practice, aspects of automation are making the justice system less fair for criminal defendants. The root of the problem is that automated criminal justice technologies are largely privately owned and sold for profit. The developers tend to view their technologies as trade secrets.",
+    "incident_description": ""
   },
   {
     "id": "aiid-3",
@@ -1157,7 +1253,9 @@
     "date": "2018-10-27",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/3",
-    "tags": []
+    "tags": [],
+    "full_text": "Why did the 737 Max plunge into the sea in Indonesia, killing all 189 on board? Pilots must know about every change on the jets they fly: Our view\n\nIndonesians recover a plastic box containing the data recorder of Lion Air Flight 610 on Nov. 1, 2018. (Photo: Pradita Utama, epa-EFE)\n\n\u201cKnow your airplane, fly your airplane\u201d is a bedrock principle for pilots. But pilots can\u2019t know their airplane if the maker fails to disclose a new emergency feature in its flight operations manual, as happened with the Boeing 737 Max. On Oct. 29, the feature, known by the acronym MCAS, relentlessly pushed down the nose of Indonesia\u2019s Lion Air Flight 610 more than 20 times before the jet plunged into the Java Sea, killing all 189 on board. Pilots struggled against the new system, which is designed to prevent a stall by automatically pushing the nose down. Tragically, on Flight 610 it was apparently triggered by a sensor delivering a false reading. There was no stall.",
+    "incident_description": ""
   },
   {
     "id": "aiid-211",
@@ -1166,7 +1264,9 @@
     "date": "2021-12-11",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/211",
-    "tags": []
+    "tags": [],
+    "full_text": "French authorities are currently investigating the accident in which a Tesla vehicle hit a cyclist and pedestrians before crashing into a van. Officials in Paris, France are working to determine the cause of an accident last Saturday involving a Tesla vehicle that killed one person and injured twenty others. There are differing accounts around the cause of the incident. According to Reuters, police are investigating the wreckage of the Tesla Model 3 and analyzing the USB key that records its activity to better understand what happened. Sarah Saldmann, a lawyer for the driver, told Reuters that the driver claims his Tesla Model 3 accelerated \u201con its own\u201d and did not respond to brakes. Saldmann adds that he was treated for minor injuries and is now under investigation for suspected involuntary manslaughter. Reuters says Tesla told the French government earlier this week that there was \u201cno indication\u201d on their end that a technical fault was responsible.",
+    "incident_description": ""
   },
   {
     "id": "aiid-61",
@@ -1199,7 +1299,9 @@
       "Public administration and defence",
       "Individual Kaggle Competitors",
       "Kaggle Competitors"
-    ]
+    ],
+    "full_text": "What I\u2019ve learned from Kaggle\u2019s fisheries competition\n\nGidi Shperber Blocked Unblock Follow Following May 1, 2017\n\nTLDR:\n\nMe and my Kaggle partner, have recently participated in \u201cThe Nature Conservancy Fisheries Monitoring\u201d (hereby: \u201cfisheries\u201d) Kaggle competition. This competition had some very interesting results, most notably, the benchmark result got ahead of most competitors. I believe there are a few very important lessons we can learn form as data scientists. Bellow you can read about the competition, and some of the things we have learned from it. The Competition\n\nSo recently you\u2019ve might have heard some buzz about Kaggle\u2019s fisheries competition, and you\u2019ve might have been wondering what all the fuss is about. In this competition your goal (as in many Kaggle competitions) was to classify an object, in this case - determine the species of a fish.\n\nwhy would you like to do this?",
+    "incident_description": ""
   },
   {
     "id": "aiid-110",
@@ -1208,7 +1310,9 @@
     "date": "2016-01-01",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/110",
-    "tags": []
+    "tags": [],
+    "full_text": "For most of her life, Tammy Dobbs, who has cerebral palsy, relied on her family in Missouri for care. But in 2008, she moved to Arkansas, where she signed up for a state program that provided for a caretaker to give her the help she needed. There, under a Medicaid waiver program, assessors interviewed beneficiaries and decided how frequently the caretaker should visit. Dobbs\u2019 needs were extensive. Her illness left her in a wheelchair and her hands stiffened. The most basic tasks of life \u2014 getting out of bed, going to the bathroom, bathing \u2014 required assistance, not to mention the trips to yard sales she treasured. The nurse assessing her situation allotted Dobbs 56 hours of home care visits per week, the maximum allowed under the program. For years, she managed well. An aide arrived daily at 8AM, helped Dobbs out of bed, into the bathroom, and then made breakfast.",
+    "incident_description": ""
   },
   {
     "id": "aiid-125",
@@ -1217,7 +1321,9 @@
     "date": "2020-09-29",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/125",
-    "tags": []
+    "tags": [],
+    "full_text": "Amazon\u2019s warehouse injury rates have been secret for years despite mounting public concerns over labor practices and lack of worker safety. With access to a trove of new internal records, Reveal from The Center for Investigative Reporting is now able to show injury rates across more than 150 Amazon fulfillment centers from 2016 through 2019. We\u2019ve calculated the annual injury rate and serious injury rate for every warehouse with more than 200,000 hours worked each year. A low number of hours worked in a year can result in very high injury rates when there are only a few injuries recorded, so we\u2019ve excluded data for some warehouses. Serious injuries are those that require time off work or job restrictions. To find the warehouse that handled your Amazon package, look for a four-character code on the bottom-left corner of your shipping label. We\u2019ve circled it in yellow. Notes: Data for warehouses in which fewer than 200,000 hours were worked for a year were excluded from annual rates.",
+    "incident_description": ""
   },
   {
     "id": "aiid-165",
@@ -1226,7 +1332,9 @@
     "date": "2020-06-20",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/165",
-    "tags": []
+    "tags": [],
+    "full_text": "It\u2019s a startling image that illustrates the deep-rooted biases of AI research. Input a low-resolution picture of Barack Obama, the first black president of the United States, into an algorithm designed to generate depixelated faces, and the output is a white man. It\u2019s not just Obama, either. Get the same algorithm to generate high-resolution images of actress Lucy Liu or congresswoman Alexandria Ocasio-Cortez from low-resolution inputs, and the resulting faces look distinctly white. As one popular tweet quoting the Obama example put it: \u201cThis image speaks volumes about the dangers of bias in AI.\u201d\n\nBut what\u2019s causing these outputs and what do they really tell us about AI bias? First, we need to know a little a bit about the technology being used here. The program generating these images is an algorithm called PULSE, which uses a technique known as upscaling to process visual data.",
+    "incident_description": ""
   },
   {
     "id": "aiid-57",
@@ -1258,7 +1366,9 @@
       "Centrelink Master Program",
       "Department of Human Services",
       "Centrelink Master Program"
-    ]
+    ],
+    "full_text": "The head of the Department of Human Services has blamed the \u201crobo debt\u201d scandal largely on welfare recipients\u2019 failure to engage with Centrelink. The Senate inquiry into Centrelink\u2019s \u201crobo-debt\u201d system began on Wednesday, hearing from the community sector, the community and public sector union, tax office officials and the secretary of the Department of Human Services, Kathryn Campbell. Critics of the system say its many flaws have combined to create a debt recovery process that is unfair, inaccurate and inhumane. The inquiry heard that the system has only recovered $24m so far, although it has raised, or identified, $300m. It sent 217,403 letters between July and December demanding explanations from welfare recipients, 36,305 of which did not result in a debt. The system raised 133,282 debts, 12,733 of which were either reduced to zero, reduced, or written off or waived.",
+    "incident_description": ""
   },
   {
     "id": "aiid-216",
@@ -1267,7 +1377,9 @@
     "date": "2017-10-10",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/216",
-    "tags": []
+    "tags": [],
+    "full_text": "Chinese messaging app WeChat has apologized for an error in its algorithm that provided the N-word as a translation for a neutral Chinese term for black foreigners.\n\n\u201cWe\u2019re very sorry for the inappropriate translation,\u201d a WeChat spokesperson told Sixth Tone. \u201cAfter receiving users\u2019 feedback, we immediately fixed the problem.\u201d\n\nThe issue was discovered by Shanghai-based theater director Ann James, who texted her Chinese colleagues in their messaging group this morning to say she was running late. As usual, the black American typed in English, using WeChat\u2019s in-app translation feature to read the Chinese responses. She gasped when she saw that the next message contained a racist obscenity: \u201cThe n----- is late.\u201d\n\n\u201cI was just horrified,\u201d James told Sixth Tone.",
+    "incident_description": ""
   },
   {
     "id": "aiid-148",
@@ -1276,7 +1388,9 @@
     "date": "2021-11-21",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/148",
-    "tags": []
+    "tags": [],
+    "full_text": "Truth in advertising does not exist for overlay vendors False claims at the expense of customers and persons with disabilities. Introduction\n\nFalse advertising harms consumers and is damaging to a fair marketplace. It is also illegal. The Federal Trade Commission Act is the primary statute of the [Federal Trade] Commission.",
+    "incident_description": ""
   },
   {
     "id": "aiid-136",
@@ -1285,7 +1399,9 @@
     "date": "2020-12-06",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/136",
-    "tags": []
+    "tags": [],
+    "full_text": "We\u2019ve known for a long time that brand safety detection technologies were blunt instruments [1], [2], [3], [4], [5]. Despite their claims of advanced AI (artificial intelligence) and ML (machine learning) in their sales materials, it was painfully clear the brand safety technology was blocking ads based on simple keyword lists. This is not a new phenomenon, just more easily observable at the start of the pandemic when ads on the front pages of New York Times and Wall Street Journal were blocked and replaced by \u201ccloud ads\u201d just because the page contained the word \u201ccovid-19\u201d or \u201ccoronavirus.\u201d So while these brand safety technologies were being paid for by advertisers, hoping that would help keep ads off of not-brand-safe sites, they were instead blocking advertisers\u2019 ads on legitimate mainstream news sites. The result of this blocking is that more ads and dollars flow to lower quality sites in programmatic channels - the exact opposite effect to what advertisers thought would happen.",
+    "incident_description": ""
   },
   {
     "id": "aiid-145",
@@ -1294,7 +1410,9 @@
     "date": "2021-07-23",
     "source": "AI Incident Database",
     "source_url": "https://incidentdatabase.ai/cite/145",
-    "tags": []
+    "tags": [],
+    "full_text": "Washington, DC (CNN)When a dozen small children crossed in front of our Tesla with \"full self-driving,\" I had good reason to be nervous. I'd spent my morning so far in the backseat of the Model 3 using \"full self-driving,\" the system that Tesla says will change the world by enabling safe and reliable autonomous vehicles. I'd watched the software nearly crash into a construction site, try to turn into a stopped truck and attempt to drive down the wrong side of the road. Angry drivers blared their horns as the system hesitated, sometimes right in the middle of an intersection. (We had an attentive human driver behind the wheel during all of our tests, to take full control when needed.)\n\nThe Model 3's \"full self-driving\" needed plenty of human interventions to protect us and everyone else on the road. Sometimes that meant tapping the brake to turn off the software, so that it wouldn't try to drive around a car in front of us.",
+    "incident_description": ""
   },
   {
     "id": "aiid-41",
@@ -1323,6 +1441,8 @@
       "Information and communication",
       "MIT Media Lab",
       "MIT Media Lab"
-    ]
+    ],
+    "full_text": "MIT researchers created an artificial intelligence that they call \u201cpsychopathic\u201d in order to show the biases that are inherent in AI research. When asked to look at Rorschach test blots, \u201cNorman\u201d always sees death. Here\u2019s what Norman saw, compared to a \u201cstandard\u201d AI:\n\nNorman is an important entry into our ever-expanding vault of hyper specific artificial intelligence bots, but some people are wondering what the researchers hath wrought on poor Norman.\n\n\u201cWe received a lot of comments from public, and people generally found the project cool and surprised that AI can be pushed to the extreme and generate such morbid results,\u201d the researchers told me in an email. \u201cHowever, there are also a few people who didn\u2019t take it quite well.\u201d\n\nOne person wrote an email directly to Norman, who we might as well think of as the Frankenstein\u2019s monster of AI: \u201cYour creators are pieces of shit,\u201d the person wrote. \u201cNothing should ever be subjected to negativity of any action unwillingly.",
+    "incident_description": ""
   }
 ]

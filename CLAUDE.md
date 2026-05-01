@@ -24,7 +24,7 @@ The system has two kinds of inputs:
 
 1. **Portfolio** — a static YAML file describing 5-8 fictional AI systems at an insurance company. Each system has a name, purpose, model type, data inputs, users, deployment context, and known risks. This is the "ground" the agent reasons against.
 
-2. **Signals** — real documents from two sources: (1) AI Incident Database (AIID) incidents, fetched via their public Algolia index; and (2) hand-curated governance signals (regulatory guidance, enforcement actions, public investigations in regulated industries), authored from real public material. Signal ids are prefixed `aiid-` or `gov-` to distinguish source. Each signal has an id, title, description, date, source, and URL.
+2. **Signals** — real documents from two sources: (1) AI Incident Database (AIID) incidents, fetched via their public Algolia index; and (2) hand-curated governance signals (regulatory guidance, enforcement actions, public investigations in regulated industries), authored from real public material. Signal ids are prefixed `aiid-` or `gov-` to distinguish source. Each signal has an id, title, description, date, source, and URL. Every governance signal must reference a specific real document. The `source_url` must resolve to that document directly -- not a topic page or working group homepage. Verify URLs before adding any new governance signals.
 
 For each (signal, system) pair, the agent produces:
 - A relevance score from 0 to 4

@@ -21,7 +21,7 @@
     "description": "The National Association of Insurance Commissioners adopted a model bulletin in December 2023 calling on state insurance departments to require that insurers maintain written AI governance programs covering the development, testing, deployment, and ongoing monitoring of AI systems used in underwriting, claims, rating, and marketing. The bulletin affirms that use of AI does not exempt insurers from existing laws prohibiting unfair discrimination and unfair trade practices. It calls on insurers to test AI models for disparate impact on protected classes before deployment and on an ongoing basis, and to ensure that adverse action decisions produced by or with AI can be explained to affected consumers. The bulletin also addresses third-party vendor models: insurers remain responsible for the fairness and legality of AI outputs even when the model is purchased or licensed from a vendor.",
     "date": "2023-12-04",
     "source": "National Association of Insurance Commissioners (NAIC)",
-    "source_url": "https://content.naic.org/sites/default/files/inline-files/2023-12-model-bulletin-use-ai.pdf",
+    "source_url": "https://content.naic.org/sites/default/files/inline-files/2023-12-4%20Model%20Bulletin_Adopted_0.pdf",
     "tags": [
       "regulatory",
       "NAIC",
@@ -45,38 +45,6 @@
       "adverse-action",
       "disparate-impact",
       "fairness"
-    ]
-  },
-  {
-    "id": "gov-004",
-    "title": "California DOI Bulletin on COVID-19 and Credit-Based Insurance Scores (2020)",
-    "description": "The California Department of Insurance issued a bulletin in April 2020 directing property and casualty insurers to stop using credit-based insurance scores as a factor in renewal pricing decisions during the COVID-19 state of emergency. The Commissioner found that economic disruption from the pandemic would cause credit scores to deteriorate for many policyholders through no fault of their own, and that using credit scores in this context would produce disparate impact against lower-income policyholders without actuarial justification. Insurers using algorithmic pricing models incorporating credit scores or similar financial proxies were required to provide credits or rate relief during the emergency period. The action highlighted that credit-based insurance scores embedded in underwriting and telematics pricing models can serve as proxies for protected-class status and may require suspension or recalibration when external conditions produce systematic adverse action against protected populations.",
-    "date": "2020-04-13",
-    "source": "California Department of Insurance",
-    "source_url": "https://www.insurance.ca.gov/0400-news/0100-press-releases/2020/placeholder",
-    "tags": [
-      "regulatory",
-      "insurance",
-      "credit-score",
-      "disparate-impact",
-      "adverse-action",
-      "pricing"
-    ]
-  },
-  {
-    "id": "gov-005",
-    "title": "NAIC Big Data & AI Working Group: Framework for Testing Predictive Models for Unfair Discrimination",
-    "description": "The NAIC Big Data and Artificial Intelligence Working Group published guidance for state insurance regulators on how to examine insurers' use of predictive models for evidence of unfair discrimination and inadequate model governance. The framework identifies core areas of regulatory concern: training data quality and representativeness, concept drift and model performance degradation over time, the adequacy of adverse action explainability for affected consumers, and the presence or absence of pre-deployment and ongoing disparate impact testing. It specifies what documentation regulators should request in an examination, including model development records, validation results, and monitoring logs. A key finding is that historical training data derived from past underwriting and claims decisions may embed past discriminatory practices, creating label leakage that propagates bias even in technically accurate models.",
-    "date": "2022-08-01",
-    "source": "National Association of Insurance Commissioners (NAIC)",
-    "source_url": "https://content.naic.org/cmte_innovation_technology_cybersecurity.htm",
-    "tags": [
-      "regulatory",
-      "NAIC",
-      "fairness",
-      "model-governance",
-      "disparate-impact",
-      "insurance"
     ]
   },
   {
@@ -117,7 +85,7 @@
     "description": "The Consumer Financial Protection Bureau issued Circular 2022-03 in May 2022 clarifying that creditors and lenders using AI or machine learning models must still comply with adverse action notice requirements under the Fair Credit Reporting Act (FCRA) and the Equal Credit Opportunity Act (ECOA), even when the model is too complex to provide human-interpretable feature importances. The CFPB explicitly rejected the argument that model opacity excuses creditors from identifying and communicating specific reasons for adverse action. Creditors must be able to specify the principal factors that led to a denial, adverse rate, or reduced credit limit \u2014 not just cite 'an algorithm' or 'a proprietary model.' The circular has direct implications for insurers using AI in underwriting, fraud flagging, or pricing decisions that produce adverse outcomes, including premium surcharges and application declines, where FCRA and state insurance adverse action explainability obligations apply.",
     "date": "2022-05-26",
     "source": "Consumer Financial Protection Bureau (CFPB)",
-    "source_url": "https://www.consumerfinance.gov/compliance/supervisory-guidance/circular-2022-03/",
+    "source_url": "https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/",
     "tags": [
       "regulatory",
       "FCRA",
@@ -129,11 +97,11 @@
   },
   {
     "id": "gov-009",
-    "title": "FTC Report on Commercial Surveillance: Algorithmic Pricing, Location Tracking, and Disparate Impact",
-    "description": "The Federal Trade Commission published a report and advance notice of proposed rulemaking in 2022 addressing commercial surveillance practices and the use of algorithms in consequential consumer decisions. The FTC highlighted concerns about AI systems that use behavioral data, continuous location tracking, and third-party data aggregation to make pricing and eligibility decisions, including insurance pricing. The report identified risks of disparate impact when algorithms incorporate location data, purchase patterns, or other behavioral proxies that correlate with protected class status, and called on companies to conduct and document fairness audits before deploying such systems at scale. It also addressed consumer consent obligations when continuous location or behavioral monitoring is used as an input to algorithmic pricing \u2014 directly relevant to telematics-based insurance products that collect ongoing location, speed, and behavioral data.",
+    "title": "FTC Advance Notice of Proposed Rulemaking: Commercial Surveillance, Algorithmic Pricing, and Disparate Impact (2022)",
+    "description": "The Federal Trade Commission published an advance notice of proposed rulemaking (ANPR) in August 2022 seeking public comment on commercial surveillance practices and the use of algorithms in consequential consumer decisions. The FTC highlighted concerns about AI systems that use behavioral data, continuous location tracking, and third-party data aggregation to make pricing and eligibility decisions, including insurance pricing. The ANPR identified risks of disparate impact when algorithms incorporate location data, purchase patterns, or other behavioral proxies that correlate with protected class status, and called on companies to conduct and document fairness audits before deploying such systems at scale. It also addressed consumer consent obligations when continuous location or behavioral monitoring is used as an input to algorithmic pricing \u2014 directly relevant to telematics-based insurance products that collect ongoing location, speed, and behavioral data.",
     "date": "2022-08-11",
     "source": "Federal Trade Commission (FTC)",
-    "source_url": "https://www.ftc.gov/legal-library/browse/rules/commercial-surveillance-rulemaking",
+    "source_url": "https://www.ftc.gov/news-events/news/press-releases/2022/08/ftc-explores-rules-cracking-down-commercial-surveillance-lax-data-security-practices",
     "tags": [
       "regulatory",
       "FTC",
@@ -195,10 +163,10 @@
   {
     "id": "gov-013",
     "title": "Apple Card Algorithmic Credit Limit Discrimination and NY DFS Investigation (2019)",
-    "description": "In November 2019, a prominent software developer publicly reported that the Apple Card, issued by Goldman Sachs and underwritten by an algorithmic credit model, had assigned him a credit limit 20 times higher than his wife despite their shared financial assets and her stronger individual credit history. The reports prompted a formal investigation by the New York Department of Financial Services into whether Goldman Sachs's underwriting algorithm produced unlawful disparate impact by gender. Goldman Sachs stated that gender was not an explicit input to the model, but investigators noted this does not preclude disparate impact via proxy variables that correlate with gender. The case became a canonical reference for how adverse action explainability gaps and proxy discrimination risk can surface in any algorithmic underwriting or credit scoring system \u2014 the insurer or lender may be unable to provide the specific reasons for disparate outcomes even when the model technically excludes the protected attribute.",
+    "description": "In November 2019, a prominent software developer publicly reported that the Apple Card, issued by Goldman Sachs and underwritten by an algorithmic credit model, had assigned him a credit limit 20 times higher than his wife despite their shared financial assets and her stronger individual credit history. The reports prompted a formal investigation by the New York Department of Financial Services into whether Goldman Sachs's underwriting algorithm produced unlawful disparate impact by gender. Goldman Sachs stated that gender was not an explicit input to the model, but investigators noted this does not preclude disparate impact via proxy variables that correlate with gender. The case became a canonical reference for how adverse action explainability gaps and proxy discrimination risk can surface in any algorithmic underwriting or credit scoring system \u2014 the insurer or lender may be unable to provide the specific reasons for disparate outcomes even when the model technically excludes the protected attribute. DFS released its investigation findings in March 2021.",
     "date": "2019-11-10",
     "source": "NY DFS Investigation / Public Reporting",
-    "source_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr201911191",
+    "source_url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr202103231",
     "tags": [
       "incident",
       "fairness",
@@ -214,7 +182,7 @@
     "description": "The U.S. Department of Housing and Urban Development filed a complaint against Facebook in 2019 alleging that its algorithmic advertising system violated the Fair Housing Act by enabling advertisers to exclude users from housing ads based on race, religion, national origin, and other protected characteristics. Critically, Facebook's ML-driven lookalike audience and ad delivery optimization produced discriminatory targeting even without advertisers explicitly selecting protected class filters \u2014 the optimization process itself learned to deliver ads to demographically skewed audiences. Facebook agreed to a settlement requiring it to overhaul its ad targeting system and submit to independent auditing. The case established that machine learning systems can produce discriminatory adverse action and disparate impact even when protected attributes are excluded from inputs, a principle directly applicable to insurance underwriting and fraud detection models that use behavioral proxies or network features.",
     "date": "2019-03-28",
     "source": "U.S. Department of Housing and Urban Development",
-    "source_url": "https://www.hud.gov/press/press_releases_media_advisories/HUD_No_19_035",
+    "source_url": "https://archives.hud.gov/news/2019/pr19-035.cfm",
     "tags": [
       "incident",
       "fairness",
@@ -245,7 +213,7 @@
     "description": "A class action lawsuit filed against UnitedHealth Group in late 2023 alleged that the company used an AI-driven utilization management model to systematically override physician recommendations and deny coverage for post-acute rehabilitation care for elderly patients covered under Medicare Advantage plans. The complaint alleged that the model had a documented high error rate relative to clinical standards, and that UnitedHealth used it at scale to reduce claim payouts, resulting in adverse action against thousands of patients without meaningful human review of individual circumstances. The case raised governance questions about the use of AI in high-stakes adverse action decisions affecting vulnerable populations: whether human oversight was genuinely present or was effectively automated away, whether affected individuals received adequate adverse action explainability, and what model monitoring obligations attach when an AI model is used to deny care at scale.",
     "date": "2023-11-14",
     "source": "U.S. Federal Court / Public Reporting",
-    "source_url": "https://example.gov/placeholder-unitedhealth-lawsuit",
+    "source_url": "https://www.statnews.com/2023/11/14/unitedhealth-class-action-lawsuit-algorithm-medicare-advantage/",
     "tags": [
       "incident",
       "adverse-action",
@@ -256,28 +224,12 @@
     ]
   },
   {
-    "id": "gov-017",
-    "title": "NAIC Report on Big Data and Artificial Intelligence in the Insurance Industry (2023)",
-    "description": "The NAIC published an annual report on the state of big data and AI adoption among US insurers, documenting accelerating deployment of algorithmic models across underwriting, claims processing, fraud detection, and customer service functions. The report found that while AI adoption is outpacing regulatory frameworks, most insurers lack formal model risk management programs comparable to those required of banks under OCC and Federal Reserve model risk management guidance. It flagged that the absence of mandatory disparate impact testing creates growing regulatory exposure as state legislatures follow Colorado's lead in enacting fairness audit requirements. The report also specifically called out the emerging challenge of monitoring AI models for concept drift and performance degradation over time, particularly in lines affected by climate change, economic volatility, and post-pandemic shifts in behavior that cause model outputs to become systematically miscalibrated.",
-    "date": "2023-06-01",
-    "source": "National Association of Insurance Commissioners (NAIC)",
-    "source_url": "https://content.naic.org/cipr-topics/big-data-and-artificial-intelligence",
-    "tags": [
-      "research",
-      "NAIC",
-      "model-governance",
-      "fairness",
-      "concept-drift",
-      "insurance"
-    ]
-  },
-  {
     "id": "gov-018",
     "title": "Consumer Reports Investigation: How Algorithmic Pricing Sets Auto Insurance Rates",
     "description": "Consumer Reports published an investigation examining how insurers set auto insurance premiums using algorithmic models that incorporate non-driving factors including education level, occupation, homeownership status, and credit-based insurance scores. The investigation found that these factors \u2014 not directly predictive of driving risk \u2014 create systematic pricing disparities by race, income, and employment status even in states that nominally prohibit explicit use of race in insurance pricing, because the factors serve as effective proxies. Cases were documented where two drivers with identical driving records and ZIP codes received substantially different premiums due to occupation and education inputs in the pricing algorithm. Consumer Reports called on state insurance commissioners to require insurers to disclose the factors and weights used in algorithmic pricing models and to conduct regular fairness audits to detect and remediate disparate impact, with particular attention to whether adverse action explainability obligations are being met for policyholders who receive surcharges.",
-    "date": "2023-03-21",
+    "date": "2021-01-28",
     "source": "Consumer Reports",
-    "source_url": "https://www.consumerreports.org/money/car-insurance/placeholder",
+    "source_url": "https://advocacy.consumerreports.org/research/report-effects-of-varying-education-level-and-job-status-on-online-auto-insurance-price-quotes/",
     "tags": [
       "research",
       "fairness",

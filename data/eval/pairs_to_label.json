@@ -1,0 +1,296 @@
+[
+  {
+    "signal_id": "aiid-57",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2072785496711731,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4433445334434509,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.021796010434627533,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.051289986819028854,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06926747411489487,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.17299975454807281,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.21122238039970398,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.0768875852227211,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.2224065661430359,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.011794216930866241,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.21593815088272095,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.4194257855415344,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.44280222058296204,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.22192509472370148,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.07413259893655777,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "auto_claims_summarizer",
+    "cosine_similarity": 0.06531240791082382,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "customer_chatbot",
+    "cosine_similarity": 0.09812836349010468,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "fraud_detector",
+    "cosine_similarity": -0.02154429443180561,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.44290122389793396,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.07203255593776703,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.11625787615776062,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.08785293251276016,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.26889345049858093,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.0766945406794548,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.23709776997566223,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.026933038607239723,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.010375547222793102,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.5200800895690918,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.16996978223323822,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.2471335232257843,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.514045774936676,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.170006662607193,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "doc_extractor",
+    "cosine_similarity": 0.08263958990573883,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "fraud_detector",
+    "cosine_similarity": 0.5410915613174438,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.2539319396018982,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27921509742736816,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.31799232959747314,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.27414217591285706,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.4931398630142212,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.5408356785774231,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": -0.07207920402288437,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.039022766053676605,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.1478424370288849,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.05490340292453766,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.20915423333644867,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.33343252539634705,
+    "skipped": false
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": 0.3303200602531433,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "underwriting_scorer",
+    "cosine_similarity": 0.033705588430166245,
+    "skipped": false
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "telematics_pricer",
+    "cosine_similarity": -0.021588750183582306,
+    "skipped": false
+  }
+]

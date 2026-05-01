@@ -12,7 +12,13 @@
       "Bash(streamlit run:*)",
       "Bash(curl -s http://localhost:8501)",
       "Bash(curl -s http://localhost:8501/healthz)",
-      "Bash(python3 -c \"import sys; content = sys.stdin.read\\(\\); print\\('App loaded' if 'streamlit' in content.lower\\(\\) else 'ERROR: unexpected response'\\); print\\(f'Response size: {len\\(content\\)} chars'\\)\")"
+      "Bash(python3 -c \"import sys; content = sys.stdin.read\\(\\); print\\('App loaded' if 'streamlit' in content.lower\\(\\) else 'ERROR: unexpected response'\\); print\\(f'Response size: {len\\(content\\)} chars'\\)\")",
+      "WebFetch(domain:www.dfs.ny.gov)",
+      "WebFetch(domain:www.hud.gov)",
+      "WebFetch(domain:www.propublica.org)",
+      "WebFetch(domain:content.naic.org)",
+      "WebFetch(domain:www.consumerreports.org)",
+      "WebSearch"
     ]
   }
 }
