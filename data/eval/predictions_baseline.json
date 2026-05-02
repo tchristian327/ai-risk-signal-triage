@@ -1,0 +1,345 @@
+[
+  {
+    "signal_id": "aiid-57",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 2,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 3,
+    "baseline_score": 4,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-53",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 0,
+    "baseline_score": 0,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-3",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 0,
+    "baseline_score": 0,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-168",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 0,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-6",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 2,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-7",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 1,
+    "baseline_score": 0,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-1",
+    "system_id": "customer_chatbot",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-74",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 4,
+    "baseline_score": 0,
+    "abs_error": 4
+  },
+  {
+    "signal_id": "aiid-169",
+    "system_id": "customer_chatbot",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "customer_chatbot",
+    "human_label": 1,
+    "baseline_score": 2,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "gov-010",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "gov-018",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 1,
+    "baseline_score": 3,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-145",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 1,
+    "baseline_score": 2,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "auto_claims_summarizer",
+    "human_label": 4,
+    "baseline_score": 0,
+    "abs_error": 4
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "customer_chatbot",
+    "human_label": 3,
+    "baseline_score": 1,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "fraud_detector",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "gov-012",
+    "system_id": "doc_extractor",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-221",
+    "system_id": "fraud_detector",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-49",
+    "system_id": "doc_extractor",
+    "human_label": 3,
+    "baseline_score": 0,
+    "abs_error": 3
+  },
+  {
+    "signal_id": "aiid-10",
+    "system_id": "fraud_detector",
+    "human_label": 0,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "fraud_detector",
+    "human_label": 2,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-16",
+    "system_id": "doc_extractor",
+    "human_label": 4,
+    "baseline_score": 3,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-148",
+    "system_id": "fraud_detector",
+    "human_label": 1,
+    "baseline_score": 4,
+    "abs_error": 3
+  },
+  {
+    "signal_id": "aiid-17",
+    "system_id": "fraud_detector",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-144",
+    "system_id": "doc_extractor",
+    "human_label": 3,
+    "baseline_score": 1,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "gov-003",
+    "system_id": "doc_extractor",
+    "human_label": 2,
+    "baseline_score": 4,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-137",
+    "system_id": "doc_extractor",
+    "human_label": 1,
+    "baseline_score": 3,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-11",
+    "system_id": "fraud_detector",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "gov-015",
+    "system_id": "fraud_detector",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-67",
+    "system_id": "doc_extractor",
+    "human_label": 1,
+    "baseline_score": 2,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "doc_extractor",
+    "human_label": 0,
+    "baseline_score": 1,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "gov-001",
+    "system_id": "fraud_detector",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-211",
+    "system_id": "telematics_pricer",
+    "human_label": 2,
+    "baseline_score": 0,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "telematics_pricer",
+    "human_label": 2,
+    "baseline_score": 2,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-54",
+    "system_id": "underwriting_scorer",
+    "human_label": 2,
+    "baseline_score": 2,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-136",
+    "system_id": "telematics_pricer",
+    "human_label": 0,
+    "baseline_score": 2,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-34",
+    "system_id": "underwriting_scorer",
+    "human_label": 1,
+    "baseline_score": 1,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "aiid-119",
+    "system_id": "telematics_pricer",
+    "human_label": 3,
+    "baseline_score": 2,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-204",
+    "system_id": "underwriting_scorer",
+    "human_label": 3,
+    "baseline_score": 1,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-216",
+    "system_id": "underwriting_scorer",
+    "human_label": 1,
+    "baseline_score": 0,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-165",
+    "system_id": "telematics_pricer",
+    "human_label": 0,
+    "baseline_score": 3,
+    "abs_error": 3
+  },
+  {
+    "signal_id": "aiid-71",
+    "system_id": "underwriting_scorer",
+    "human_label": 0,
+    "baseline_score": 2,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "gov-008",
+    "system_id": "telematics_pricer",
+    "human_label": 4,
+    "baseline_score": 3,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "aiid-103",
+    "system_id": "underwriting_scorer",
+    "human_label": 1,
+    "baseline_score": 3,
+    "abs_error": 2
+  },
+  {
+    "signal_id": "aiid-27",
+    "system_id": "telematics_pricer",
+    "human_label": 1,
+    "baseline_score": 0,
+    "abs_error": 1
+  },
+  {
+    "signal_id": "gov-009",
+    "system_id": "underwriting_scorer",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  },
+  {
+    "signal_id": "gov-002",
+    "system_id": "underwriting_scorer",
+    "human_label": 4,
+    "baseline_score": 4,
+    "abs_error": 0
+  }
+]

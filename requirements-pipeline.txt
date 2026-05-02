@@ -9,3 +9,4 @@ pyyaml
 python-dotenv
 certifi
 numpy
+scikit-learn
