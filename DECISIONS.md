@@ -263,3 +263,15 @@ The 65.3% off-by-one is partly inflated by the model being "close enough" when i
 2. **System card disclaimers read as blanket exemptions.** When a system card includes language like "not used for coverage decisions," the model treats this as a general risk exemption — dismissing signals about bias or fairness in the system's actual inputs. This showed up most clearly on the Auto Claims Summarizer but the pattern likely generalizes.
 
 **Implication for Day 9:** The asymmetric-error-cost language in the v1 prompt ("when uncertain, prefer the higher score") is not overcoming the model's conservative default. Day 9 prompt iteration should target: (a) explicit language that analogous risk transfer is sufficient for score 2-3, and (b) clarifying that operational disclaimers in system cards do not exempt a system from related risk categories. Rubric stays locked — only prompt scaffolding changes.
+
+---
+
+## 2026-05-01 — Day 9 eval results: v2 prompt iteration findings
+
+**Headline results:** Four targeted prompt changes (remove downward prior, add risk-category rule, add score-2/3 anchor examples, rewrite role framing) moved: exact match 22.4% → 28.6%, off-by-one 65.3% → 75.5%, recall@>=3 33.3% → 44.4% (6 → 8 of 18 high-relevance pairs caught). Large errors (abs >= 2) dropped from 17 to 12.
+
+**What worked:** Removing "score 0 is correct and expected for many pairs" (Change 1) was the highest-leverage change — it unblocked score 2 entirely (0 → 9 predictions) and collapsed the bimodal distribution. The anchor examples (Change 3) reinforced this. The risk-category rule (Change 2) had partial effect; the model applied it selectively rather than consistently.
+
+**One regression:** The Obama/image-bias signal vs. Telematics Pricing Model was scored 2 by v2 (human label 0). The risk-category rule over-applied — the telematics model does list proxy discrimination as a known risk, but the LLM drew a category-level connection the human didn't endorse. One new false positive out of 49 is acceptable in the governance direction, but it confirms the risk that was flagged in the proposed changes.
+
+**Unexpected finding:** v2 off-by-one accuracy (75.5%) beats the logistic regression baseline (69.4%), despite the classifier winning on recall (44.4% vs. 61.1%). The classifier's LOO CV advantage shows up primarily in recall; the LLM judge v2 is better-calibrated across the full scale. The interview story the comparison produces: the classifier is ~450x faster and effectively free, but misses ~55% of urgent signals — the wrong error direction for governance. The LLM judge is slower and costs ~$1.68/1k pairs but catches more urgent signals and is better-calibrated. This is the intended finding and it holds after prompt iteration.

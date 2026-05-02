@@ -146,6 +146,8 @@ All Week 2 evaluation artifacts live in `data/eval/`:
 - `LABELING_NOTES.md` — observations noted during the labeling session
 - Later days will add: `metrics_llm_judge_v1.json`, `metrics_llm_judge_v2.json`, `metrics_baseline.json`, `predictions_llm_judge_v1.json`, `predictions_llm_judge_v2.json`, `predictions_baseline.json`, `error_analysis_v1.md`, `error_analysis_v2.md`, `COMPARISON.md`, `PROMPT_CHANGELOG.md`, `REPORT_WEEK2.md`
 
+`scripts/run_eval.py` and `scripts/error_analysis.py` accept `--version` (e.g., `--version v1`, `--version v2`) to control output filenames. The default follows `PROMPT_VERSION` in `src/scoring.py`, which is bumped when the prompt scaffolding changes. To re-run an older version without overwriting, pass the version explicitly.
+
 ## Related files
 
 - `PLAN.md` — the master build plan covering all days (1-13) and the stretch addition. Referenced throughout this doc. Read it first to understand the overall shape.
