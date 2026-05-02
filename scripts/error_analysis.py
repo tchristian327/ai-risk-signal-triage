@@ -30,8 +30,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 EVAL_DIR = PROJECT_ROOT / "data" / "eval"
-PREDICTIONS_PATH = EVAL_DIR / "predictions_llm_judge_v1.json"
-ANALYSIS_OUT = EVAL_DIR / "error_analysis_v1.md"
 PORTFOLIO_PATH = PROJECT_ROOT / "data" / "portfolio" / "systems.yaml"
 
 
@@ -39,13 +37,19 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run error analysis on LLM judge predictions.")
     parser.add_argument("--threshold", type=int, default=2,
                         help="Minimum abs error to include (default: 2)")
+    parser.add_argument("--version", type=str, default="v1",
+                        help="Prompt version to analyze (e.g. v1 or v2)")
     args = parser.parse_args()
 
-    if not PREDICTIONS_PATH.exists():
-        logger.error("Predictions file not found at %s. Run run_eval.py first.", PREDICTIONS_PATH)
+    predictions_path = EVAL_DIR / f"predictions_llm_judge_{args.version}.json"
+    analysis_out = EVAL_DIR / f"error_analysis_{args.version}.md"
+
+    if not predictions_path.exists():
+        logger.error("Predictions file not found at %s. Run run_eval.py --version %s first.",
+                     predictions_path, args.version)
         sys.exit(1)
 
-    records = json.loads(PREDICTIONS_PATH.read_text())
+    records = json.loads(predictions_path.read_text())
     n_total = len(records)
 
     # Load signal and system metadata for display names
@@ -77,12 +81,12 @@ def main() -> None:
 
     # --- Markdown report ---
     lines: list[str] = [
-        "# Error analysis — LLM judge v1",
+        f"# Error analysis — LLM judge {args.version}",
         "",
         f"**{summary_line}**",
         "",
         "Sorted by absolute error descending. Pairs where the model was off by 2+ points.",
-        "Human label is ground truth. Review these before Day 9 prompt iteration.",
+        "Human label is ground truth.",
         "",
     ]
 
@@ -120,8 +124,8 @@ def main() -> None:
             "",
         ]
 
-    ANALYSIS_OUT.write_text("\n".join(lines))
-    logger.info("Error analysis written to %s", ANALYSIS_OUT)
+    analysis_out.write_text("\n".join(lines))
+    logger.info("Error analysis written to %s", analysis_out)
 
 
 if __name__ == "__main__":

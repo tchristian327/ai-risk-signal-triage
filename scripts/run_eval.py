@@ -29,7 +29,7 @@ from src.evaluation import compute_all_metrics
 from src.ingest import load_all_signals
 from src.portfolio import load_portfolio
 from src.schemas import LabeledPair
-from src.scoring import BEDROCK_MODEL_ID, ANTHROPIC_MODEL_NAME, get_llm_client, score_pair
+from src.scoring import BEDROCK_MODEL_ID, ANTHROPIC_MODEL_NAME, PROMPT_VERSION, get_llm_client, score_pair
 
 logging.basicConfig(
     level=logging.INFO,
@@ -41,8 +41,6 @@ logger = logging.getLogger(__name__)
 EVAL_DIR = PROJECT_ROOT / "data" / "eval"
 LABELED_PATH = EVAL_DIR / "labeled_pairs.json"
 PORTFOLIO_PATH = PROJECT_ROOT / "data" / "portfolio" / "systems.yaml"
-METRICS_OUT = EVAL_DIR / "metrics_llm_judge_v1.json"
-PREDICTIONS_OUT = EVAL_DIR / "predictions_llm_judge_v1.json"
 
 # Approximate Haiku cost per scoring call
 _COST_PER_PAIR = 0.00168
@@ -72,7 +70,12 @@ def main() -> None:
                         help="Cap number of pairs to evaluate (for smoke tests)")
     parser.add_argument("--yes", action="store_true",
                         help="Skip cost confirmation prompt")
+    parser.add_argument("--version", type=str, default=PROMPT_VERSION,
+                        help="Output version tag (controls output filenames, e.g. v1 or v2)")
     args = parser.parse_args()
+
+    metrics_out = EVAL_DIR / f"metrics_llm_judge_{args.version}.json"
+    predictions_out = EVAL_DIR / f"predictions_llm_judge_{args.version}.json"
 
     # --- Load eval set ---
     if not LABELED_PATH.exists():
@@ -184,14 +187,14 @@ def main() -> None:
     metrics["run_metadata"] = run_meta
 
     # --- Write outputs ---
-    METRICS_OUT.write_text(json.dumps(metrics, indent=2))
-    PREDICTIONS_OUT.write_text(json.dumps(prediction_records, indent=2))
-    logger.info("Metrics written to %s", METRICS_OUT)
-    logger.info("Predictions written to %s", PREDICTIONS_OUT)
+    metrics_out.write_text(json.dumps(metrics, indent=2))
+    predictions_out.write_text(json.dumps(prediction_records, indent=2))
+    logger.info("Metrics written to %s", metrics_out)
+    logger.info("Predictions written to %s", predictions_out)
 
     # --- Console summary ---
     print("\n" + "=" * 60)
-    print("  LLM JUDGE EVALUATION — v1")
+    print(f"  LLM JUDGE EVALUATION — {args.version.upper()}")
     print("=" * 60)
     print(f"  Model:            {model_id}")
     print(f"  Eval set size:    {n} pairs ({len(predictions)} scored, {len(errors)} failed)")

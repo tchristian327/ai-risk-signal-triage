@@ -16,6 +16,9 @@ logger = logging.getLogger(__name__)
 BEDROCK_MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
 ANTHROPIC_MODEL_NAME = "claude-haiku-4-5"
 
+# Increment when the prompt scaffolding changes. Rubric version is always 1.
+PROMPT_VERSION = "v2"
+
 # ---------------------------------------------------------------------------
 # Rubric — verbatim copy of the single source of truth in CLAUDE.md.
 # If this ever drifts from CLAUDE.md, that is a bug.
@@ -27,6 +30,31 @@ RELEVANCE_RUBRIC = """
 - **3 — Action recommended.** The signal describes a risk, incident, or regulatory change that plausibly affects this system. Model owner should review and decide whether to act.
 - **4 — Urgent review.** The signal describes a risk, incident, or regulatory change with direct and immediate implications for this system. Model owner should review this week.
 """.strip()
+
+# ---------------------------------------------------------------------------
+# v1 prompt (preserved for reference — do not delete)
+# ---------------------------------------------------------------------------
+# The v1 prompt used this role/task opening:
+#
+#   "You are an AI risk analyst at an insurance company. Your job is to evaluate
+#    whether an external AI risk signal is relevant to a specific internal AI
+#    system in the company's portfolio. You will assign a relevance score from 0 to 4."
+#
+# And this asymmetric error costs section:
+#
+#   "Missing a real risk (false negative) is more costly than flagging something
+#    irrelevant (false positive). When genuinely uncertain between two adjacent
+#    scores, prefer the higher one.
+#
+#    However: a score of 0 is correct and expected for many pairs. The candidate
+#    filter has already removed the obviously unrelated pairs, but many filtered
+#    candidates will still be 0 or 1. Keyword overlap alone does not indicate
+#    relevance — two systems can share a topic area without sharing the specific
+#    risk mechanism."
+#
+# v1 failures: score collapse (0 score-2 predictions, recall@>=3 = 33%),
+# over-strict mechanism matching. See data/eval/PROMPT_CHANGELOG.md for details.
+# ---------------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------------
@@ -57,7 +85,14 @@ def get_llm_client():
 # ---------------------------------------------------------------------------
 
 def build_scoring_prompt(system: AISystem, signal: Signal) -> str:
-    """Construct the six-section scoring prompt per the llm-judge-scoring skill."""
+    """Construct the scoring prompt (v2) per the llm-judge-scoring skill.
+
+    v2 changes vs v1:
+    - Role reframed from neutral evaluator to risk-surfacing analyst (Change 4)
+    - Removed 'score 0 is expected for many pairs' downward prior (Change 1)
+    - Added concrete risk-category rule to asymmetric-cost section (Change 2)
+    - Added score-anchor examples for levels 2 and 3 (Change 3)
+    """
     system_card = f"""Name: {system.name}
 Purpose: {system.purpose}
 Model type: {system.model_type}
@@ -74,7 +109,7 @@ Description: {signal.description}"""
 
     return f"""## Role and task
 
-You are an AI risk analyst at an insurance company. Your job is to evaluate whether an external AI risk signal is relevant to a specific internal AI system in the company's portfolio. You will assign a relevance score from 0 to 4.
+You are an AI risk analyst at an insurance company responsible for surfacing external AI risk signals that warrant review by internal model owners. Your job is to flag signals that a risk-aware model owner should see — not to filter them out. When a signal has a plausible connection to an internal system, your default is to surface it. You will assign a relevance score from 0 to 4 using the rubric below.
 
 ## Relevance rubric
 
@@ -82,11 +117,19 @@ Use this rubric exactly. Do not invent intermediate scores.
 
 {RELEVANCE_RUBRIC}
 
+## Score anchor examples
+
+To calibrate levels 2 and 3, which have less intuitive boundaries than 0 and 4:
+
+**Score 2 — Worth a glance (example):** A signal about a facial recognition false arrest in law enforcement, evaluated against an auto claims summarizer that uses a vision model for vehicle damage assessment. The system processes vehicle photos, not identities — the failure mechanism differs. But the signal raises a class of vision-model error (misclassification under distribution shift) that could surface differently in the claims context. Worth a glance; no immediate action required.
+
+**Score 3 — Action recommended (example):** A regulatory guidance document requiring adverse action explainability for AI models that influence insurance decisions, evaluated against a fraud detection model that flags claims for investigator review. That flagging outcome affects the claimant. The explainability requirement plausibly applies. Model owner should review whether current documentation satisfies it.
+
 ## Asymmetric error costs
 
 Missing a real risk (false negative) is more costly than flagging something irrelevant (false positive). When genuinely uncertain between two adjacent scores, prefer the higher one.
 
-However: a score of 0 is correct and expected for many pairs. The candidate filter has already removed the obviously unrelated pairs, but many filtered candidates will still be 0 or 1. Keyword overlap alone does not indicate relevance — two systems can share a topic area without sharing the specific risk mechanism.
+If a signal illustrates a risk category that is explicitly named in a system's known risks, assign a score of at least 3, even if the specific failure mechanism in the signal differs from the exact mechanism described in the system card. Risk category match is sufficient for action-level relevance; exact mechanism match is not required.
 
 ## System card
 

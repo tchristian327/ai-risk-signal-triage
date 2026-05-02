@@ -100,3 +100,34 @@ The classifier wins on every metric, but it's not a fair fight: LOO CV gives the
 ### Why the baseline performs the way it does
  
 Both systems struggle with the middle of the rubric. The classifier gets 0 of 6 score-3 examples right. That suggests part of the score-2-vs-3 confusion is inherent in this small eval set, not purely a prompting problem.
+ 
+---
+ 
+## Day 9: LLM judge v2
+ 
+### Changes made
+ 
+1. **Removed the downward-biasing paragraph** — deleted "score 0 is correct and expected for many pairs" from the asymmetric error costs section. It was the only concrete scoring guidance in v1 and it pointed down.
+2. **Added a concrete risk-category rule** — "If a signal illustrates a risk category explicitly named in a system's known risks, assign at least a 3, even if the specific failure mechanism differs."
+3. **Added anchoring examples for scores 2 and 3** — one generic illustrative example per level to calibrate the model on the vague middle of the rubric.
+4. **Rewrote the role description** — shifted framing from "evaluate relevance" to "surface risks; your default is to flag, not filter."
+ 
+### Comparison: v1 vs v2 vs baseline
+ 
+| Metric | LLM Judge v1 | LLM Judge v2 | Logistic Regression |
+|--------|-------------|-------------|---------------------|
+| Exact match accuracy | 22.4% | 28.6% | 36.7% |
+| Off-by-one accuracy | 65.3% | 75.5% | 69.4% |
+| Recall @ score ≥ 3 (headline) | 33.3%  (6 of 18 high-relevance pairs caught) | 44.4%  (8 of 18 high-relevance pairs caught) | 61.1%  (11 of 18 high-relevance pairs caught) |
+| Confusion matrix | 11/49 on diagonal — per-class: [7, 1, 0, 0, 3] | 14/49 on diagonal — per-class: [7, 2, 2, 0, 3] | 18/49 on diagonal — per-class: [2, 6, 2, 0, 8] |
+| Eval set size | 49 pairs | 49 pairs | 49 pairs (LOO CV) |
+| Avg latency / pair | 5163 ms | 4094 ms | 11.31 ms |
+| Cost / 1k pairs | $1.68 | $1.68 | $0.00 |
+ 
+### What I see
+ 
+(3-5 sentences in your voice)
+ 
+### Was iteration worth it?
+ 
+(1-2 sentences — honest assessment of whether the v1 → v2 work paid off)

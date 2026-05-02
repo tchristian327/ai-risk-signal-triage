@@ -1,0 +1,60 @@
+{
+  "exact_match_accuracy": 0.2857142857142857,
+  "off_by_one_accuracy": 0.7551020408163265,
+  "recall_at_threshold_3": {
+    "recall": 0.4444444444444444,
+    "true_positives": 8,
+    "total_positives": 18,
+    "description": "8 of 18 high-relevance pairs caught"
+  },
+  "confusion_matrix": [
+    [
+      7,
+      13,
+      3,
+      3,
+      1
+    ],
+    [
+      0,
+      2,
+      1,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      2,
+      2,
+      3
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      5
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "n_pairs": 49,
+  "run_metadata": {
+    "timestamp": "2026-05-02T00:39:36.064061+00:00",
+    "model_id": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "provider": "bedrock",
+    "temperature": 0.0,
+    "eval_set_size": 49,
+    "n_scored": 49,
+    "n_failed": 0,
+    "elapsed_seconds": 200.6,
+    "avg_latency_ms": 4094,
+    "estimated_cost_usd": 0.0823
+  }
+}
