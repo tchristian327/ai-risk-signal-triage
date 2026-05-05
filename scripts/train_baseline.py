@@ -161,7 +161,7 @@ def main() -> None:
     print(f"  Feature dims:     {X.shape[1]}")
     print(f"  Elapsed:          {cv_meta['elapsed_seconds']:.3f}s")
     print(f"  Avg latency/pair: {cv_meta['avg_latency_ms']:.2f}ms")
-    print(f"  Est. cost:        $0.00")
+    print("  Est. cost:        $0.00")
     print()
     print(f"  Exact match accuracy:    {metrics['exact_match_accuracy']:.1%}")
     print(f"  Off-by-one accuracy:     {metrics['off_by_one_accuracy']:.1%}")

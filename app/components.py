@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import json
-
 import streamlit as st
 
 from src.schemas import AISystem, Signal, ScoredPair

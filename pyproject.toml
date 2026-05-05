@@ -11,3 +11,15 @@ requires-python = ">=3.11"
 # This makes `from src.schemas import Digest` work on Streamlit Cloud
 # without sys.path manipulation — pip installs the repo root as a package
 # when requirements.txt contains `-e .`.
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# E/W = pycodestyle, F = pyflakes.
+select = ["E", "W", "F"]
+ignore = [
+    "E501",  # line too long (prompt strings exceed 100 chars by design)
+    "E402",  # module level import not at top (all scripts do sys.path.insert before imports)
+]

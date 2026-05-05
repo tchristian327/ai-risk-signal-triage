@@ -4,6 +4,8 @@ import json
 import sys
 from pathlib import Path
 
+import pandas as pd
+
 # Streamlit Cloud runs app/streamlit_app.py from a working directory that
 # doesn't include the project root on sys.path. Add it explicitly so that
 # `from src.schemas import ...` resolves correctly.
@@ -31,6 +33,16 @@ from app.components import (  # noqa: E402
     render_signal_card,
     render_system_card,
 )
+
+
+@st.cache_data
+def load_run_metadata() -> list[dict] | None:
+    path = PROJECT_ROOT / "data" / "outputs" / "run_metadata.json"
+    try:
+        data = json.loads(path.read_text())
+        return data if isinstance(data, list) else [data]
+    except FileNotFoundError:
+        return None
 
 
 @st.cache_data
@@ -94,8 +106,8 @@ st.divider()
 # ---------------------------------------------------------------------------
 # Tabs
 # ---------------------------------------------------------------------------
-tab_overview, tab_system, tab_signal, tab_eval = st.tabs(
-    ["Overview", "By System", "By Signal", "Evaluation"]
+tab_overview, tab_system, tab_signal, tab_eval, tab_meta = st.tabs(
+    ["Overview", "By System", "By Signal", "Evaluation", "Run Metadata"]
 )
 
 # ── Overview ────────────────────────────────────────────────────────────────
@@ -261,7 +273,7 @@ with tab_eval:
             "human-readable reasoning justify its cost."
         )
 
-        st.markdown("### Limitations")
+        st.markdown("### Known limitations")
         st.markdown(
             "- **Eval set size:** 49 pairs labeled by a single human. "
             "A production system would require multiple labelers and inter-rater reliability scoring.\n"
@@ -272,3 +284,58 @@ with tab_eval:
             "Real governance work would involve interviewing model owners "
             "to build accurate system cards."
         )
+
+# ── Run Metadata ──────────────────────────────────────────────────────────────
+with tab_meta:
+    runs = load_run_metadata()
+
+    if runs is None:
+        st.info(
+            "Run metadata not yet available. "
+            "Run the pipeline first: `python scripts/run_pipeline.py`"
+        )
+    else:
+        st.markdown("## Pipeline observability")
+        st.caption(
+            "Per-run token usage, cost, and latency tracked from AWS Bedrock. "
+            "See `docs/screenshots/` for CloudWatch metrics from a real run."
+        )
+
+        # Totals across most recent run
+        latest = runs[-1]["metadata"]
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Total tokens (in)", f"{latest['total_tokens_in']:,}")
+        c2.metric("Total tokens (out)", f"{latest['total_tokens_out']:,}")
+        c3.metric("Estimated cost", f"${latest['total_estimated_cost_usd']:.4f}")
+        c4.metric("Avg latency / call", f"{latest['avg_latency_ms']:,.0f} ms")
+
+        st.markdown(f"**Pipeline runs recorded:** {len(runs)}  |  "
+                    f"**Most recent:** {latest['run_timestamp'][:19].replace('T', ' ')} UTC")
+
+        # Cost per run bar chart
+        st.markdown("### Cost per run")
+        if len(runs) == 1:
+            st.caption("Only one run recorded so far. Re-run the pipeline to see trends.")
+        chart_data = pd.DataFrame([
+            {
+                "Run": f"Run {i + 1}  ({r['metadata']['run_timestamp'][:10]})",
+                "Cost ($)": r["metadata"]["total_estimated_cost_usd"],
+            }
+            for i, r in enumerate(runs)
+        ])
+        st.bar_chart(chart_data.set_index("Run"))
+
+        # Per-call breakdown for latest run
+        with st.expander(f"Per-call breakdown — latest run ({len(runs[-1]['call_metadata'])} calls)"):
+            call_rows = [
+                {
+                    "Signal": c["signal_id"],
+                    "System": c["system_id"],
+                    "Tokens in": c["tokens_in"],
+                    "Tokens out": c["tokens_out"],
+                    "Latency (ms)": f"{c['latency_ms']:.0f}",
+                    "Cost ($)": f"{c['estimated_cost_usd']:.6f}",
+                }
+                for c in runs[-1]["call_metadata"]
+            ]
+            st.dataframe(call_rows, use_container_width=True)

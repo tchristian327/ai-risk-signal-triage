@@ -3,10 +3,11 @@ from __future__ import annotations
 import logging
 import os
 import time
+from datetime import datetime, timezone
 
 from pydantic import ValidationError
 
-from src.schemas import AISystem, LLMScoreOutput, Signal
+from src.schemas import AISystem, CallMetadata, LLMScoreOutput, Signal
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +19,10 @@ ANTHROPIC_MODEL_NAME = "claude-haiku-4-5"
 
 # Increment when the prompt scaffolding changes. Rubric version is always 1.
 PROMPT_VERSION = "v2"
+
+# Haiku 4.5 pricing (source: https://www.anthropic.com/pricing, accessed 2025-Q2)
+_COST_PER_INPUT_TOKEN = 0.80 / 1_000_000   # $0.80 / 1M input tokens
+_COST_PER_OUTPUT_TOKEN = 4.00 / 1_000_000  # $4.00 / 1M output tokens
 
 # ---------------------------------------------------------------------------
 # Rubric — verbatim copy of the single source of truth in CLAUDE.md.
@@ -166,8 +171,10 @@ def _pydantic_to_converse_tool(model_class: type, tool_name: str) -> dict:
 # Provider-specific call implementations
 # ---------------------------------------------------------------------------
 
-def _call_bedrock(client, prompt: str) -> LLMScoreOutput:
+def _call_bedrock(client, prompt: str) -> tuple[LLMScoreOutput, int, int, float]:
+    """Returns (score_output, tokens_in, tokens_out, latency_ms)."""
     tool = _pydantic_to_converse_tool(LLMScoreOutput, "record_score")
+    t0 = time.time()
     response = client.converse(
         modelId=BEDROCK_MODEL_ID,
         messages=[{"role": "user", "content": [{"text": prompt}]}],
@@ -177,14 +184,20 @@ def _call_bedrock(client, prompt: str) -> LLMScoreOutput:
         },
         inferenceConfig={"temperature": 0.0, "maxTokens": 1024},
     )
+    latency_ms = (time.time() - t0) * 1000
+    usage = response.get("usage", {})
+    tokens_in = usage.get("inputTokens", 0)
+    tokens_out = usage.get("outputTokens", 0)
     for block in response["output"]["message"]["content"]:
         if "toolUse" in block:
-            return LLMScoreOutput.model_validate(block["toolUse"]["input"])
+            return LLMScoreOutput.model_validate(block["toolUse"]["input"]), tokens_in, tokens_out, latency_ms
     raise ValueError("Bedrock response did not contain a tool use block.")
 
 
-def _call_anthropic(client, prompt: str) -> LLMScoreOutput:
+def _call_anthropic(client, prompt: str) -> tuple[LLMScoreOutput, int, int, float]:
+    """Returns (score_output, tokens_in, tokens_out, latency_ms)."""
     tool = _pydantic_to_converse_tool(LLMScoreOutput, "record_score")
+    t0 = time.time()
     response = client.messages.create(
         model=ANTHROPIC_MODEL_NAME,
         max_tokens=1024,
@@ -197,9 +210,12 @@ def _call_anthropic(client, prompt: str) -> LLMScoreOutput:
         tool_choice={"type": "tool", "name": "record_score"},
         messages=[{"role": "user", "content": prompt}],
     )
+    latency_ms = (time.time() - t0) * 1000
+    tokens_in = response.usage.input_tokens
+    tokens_out = response.usage.output_tokens
     for block in response.content:
         if block.type == "tool_use":
-            return LLMScoreOutput.model_validate(block.input)
+            return LLMScoreOutput.model_validate(block.input), tokens_in, tokens_out, latency_ms
     raise ValueError("Anthropic response did not contain a tool use block.")
 
 
@@ -207,7 +223,7 @@ def _call_anthropic(client, prompt: str) -> LLMScoreOutput:
 # Retry wrapper
 # ---------------------------------------------------------------------------
 
-def _score_with_retry(call_fn, max_attempts: int = 3) -> LLMScoreOutput:
+def _score_with_retry(call_fn, max_attempts: int = 3) -> tuple[LLMScoreOutput, int, int, float]:
     """Retry on transient transport errors only. Fail loudly on schema errors."""
     # Import here to avoid hard dependency when provider is "anthropic"
     try:
@@ -256,12 +272,14 @@ def _score_with_retry(call_fn, max_attempts: int = 3) -> LLMScoreOutput:
 # Public entry point
 # ---------------------------------------------------------------------------
 
-def score_pair(system: AISystem, signal: Signal, client) -> LLMScoreOutput:
+def score_pair(system: AISystem, signal: Signal, client) -> tuple[LLMScoreOutput, CallMetadata]:
     """Score a single (signal, system) pair using the LLM-as-judge rubric.
 
-    The client parameter is whatever get_llm_client() returned. Provider
-    detection is based on the client's type, not a global flag, so this
-    function stays stateless and testable.
+    Returns both the score output and a CallMetadata record with token counts,
+    latency, and estimated cost for observability.
+
+    Provider detection is based on the client's type, not a global flag, so
+    this function stays stateless and testable.
     """
     prompt = build_scoring_prompt(system, signal)
 
@@ -269,9 +287,24 @@ def score_pair(system: AISystem, signal: Signal, client) -> LLMScoreOutput:
     client_type = type(client).__name__
 
     if client_type == "BedrockRuntime":
-        call_fn = lambda: _call_bedrock(client, prompt)
+        def call_fn() -> tuple[LLMScoreOutput, int, int, float]:
+            return _call_bedrock(client, prompt)
     else:
-        # Anthropic client (or any non-Bedrock client in tests)
-        call_fn = lambda: _call_anthropic(client, prompt)
+        def call_fn() -> tuple[LLMScoreOutput, int, int, float]:  # type: ignore[misc]
+            return _call_anthropic(client, prompt)
 
-    return _score_with_retry(call_fn)
+    result, tokens_in, tokens_out, latency_ms = _score_with_retry(call_fn)
+
+    est_cost = tokens_in * _COST_PER_INPUT_TOKEN + tokens_out * _COST_PER_OUTPUT_TOKEN
+    call_meta = CallMetadata(
+        signal_id=signal.id,
+        system_id=system.id,
+        model_id=BEDROCK_MODEL_ID,
+        tokens_in=tokens_in,
+        tokens_out=tokens_out,
+        latency_ms=round(latency_ms, 1),
+        estimated_cost_usd=round(est_cost, 8),
+        timestamp=datetime.now(tz=timezone.utc).isoformat(),
+    )
+
+    return result, call_meta

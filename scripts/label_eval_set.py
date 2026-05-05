@@ -143,7 +143,7 @@ def do_back_navigation(
             if raw in ("0", "1", "2", "3", "4"):
                 note = input("Note (optional, press Enter to skip): ").strip()
                 labeled = overwrite_label(pair_info, int(raw), note, labeled)
-                print(f"Label updated.")
+                print("Label updated.")
                 return labeled
             print("Invalid input. Enter 0-4, Enter to keep, or 'b' for earlier pair.")
 

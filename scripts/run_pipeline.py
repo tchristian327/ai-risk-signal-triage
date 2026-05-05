@@ -60,7 +60,10 @@ def main() -> None:
                     args.limit_signals, args.limit_signals)
         subset = load_all_signals()[: args.limit_signals]
 
-        import json, tempfile, atexit, os
+        import json
+        import tempfile
+        import atexit
+        import os
         tmp = tempfile.NamedTemporaryFile(
             mode="w", suffix=".json", delete=False, dir=PROJECT_ROOT / "data" / "outputs"
         )
@@ -94,7 +97,7 @@ def main() -> None:
 
     # Summary
     m = digest.metadata
-    print(f"\n=== Pipeline complete ===")
+    print("\n=== Pipeline complete ===")
     print(f"Systems: {m.num_systems}  |  Signals: {m.num_signals}")
     print(f"Pairs after retrieval: {m.num_pairs_after_retrieval}")
     print(f"Scored: {m.num_pairs_scored}  |  Failed: {m.num_pairs_failed}")

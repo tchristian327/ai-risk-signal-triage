@@ -96,6 +96,11 @@ class RunMetadata(BaseModel):
     num_pairs_scored: int
     num_pairs_failed: int
     elapsed_seconds: float
+    # Aggregated observability fields (default 0 for backwards compat with older digest files)
+    total_tokens_in: int = 0
+    total_tokens_out: int = 0
+    total_estimated_cost_usd: float = 0.0
+    avg_latency_ms: float = 0.0
 
 
 class Digest(BaseModel):
@@ -103,6 +108,30 @@ class Digest(BaseModel):
     systems: list[AISystem]
     signals: list[Signal]
     scored_pairs: list[ScoredPair]
+
+
+class CallMetadata(BaseModel):
+    """Per-LLM-call observability record. Written to run_metadata.json, not digest.json."""
+
+    signal_id: str
+    system_id: str
+    model_id: str
+    tokens_in: int
+    tokens_out: int
+    latency_ms: float
+    estimated_cost_usd: float
+    timestamp: str  # ISO 8601
+
+
+class RunReport(BaseModel):
+    """Full observability report written to data/outputs/run_metadata.json.
+
+    Separates per-call details from digest.json to keep the digest clean.
+    The dashboard reads run_metadata.json for the observability tab.
+    """
+
+    metadata: RunMetadata
+    call_metadata: list[CallMetadata]
 
 
 class LabeledPair(BaseModel):

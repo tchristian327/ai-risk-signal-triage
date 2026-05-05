@@ -5,3 +5,4 @@
 -e .
 streamlit
 pydantic
+pandas

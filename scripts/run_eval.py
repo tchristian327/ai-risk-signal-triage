@@ -140,9 +140,8 @@ def main() -> None:
         signal = signal_map[lp.signal_id]
 
         try:
-            pair_start = time.time()
-            result = score_pair(system, signal, client)
-            latency_ms = round((time.time() - pair_start) * 1000)
+            result, call_meta = score_pair(system, signal, client)
+            latency_ms = round(call_meta.latency_ms)
             predictions.append(result.score)
             labels.append(lp.human_label)
             prediction_records.append({

@@ -10,7 +10,7 @@ from pathlib import Path
 from src.ingest import load_all_signals
 from src.portfolio import load_portfolio
 from src.retrieval import compute_similarities
-from src.schemas import Digest, RunMetadata, ScoredPair, SimilarityPair, Signal, AISystem
+from src.schemas import CallMetadata, Digest, RunMetadata, RunReport, ScoredPair, SimilarityPair, Signal, AISystem
 from src.scoring import BEDROCK_MODEL_ID, get_llm_client, score_pair
 
 logger = logging.getLogger(__name__)
@@ -107,6 +107,7 @@ def run_pipeline(
     system_lookup: dict[str, AISystem] = {s.id: s for s in systems}
 
     scored_pairs: list[ScoredPair] = []
+    call_records: list[CallMetadata] = []
     num_failed = 0
 
     for i, candidate in enumerate(candidates, start=1):
@@ -120,7 +121,7 @@ def run_pipeline(
             )
 
         try:
-            result = score_pair(system, signal, client)
+            result, call_meta = score_pair(system, signal, client)
             scored_pairs.append(ScoredPair(
                 signal_id=candidate.signal_id,
                 system_id=candidate.system_id,
@@ -130,6 +131,7 @@ def run_pipeline(
                 suggested_action=result.suggested_action,
                 reasoning=result.reasoning,
             ))
+            call_records.append(call_meta)
         except Exception as e:
             logger.error(
                 "FAILED pair %s x %s: %s",
@@ -143,6 +145,15 @@ def run_pipeline(
         len(scored_pairs), num_failed, elapsed,
     )
 
+    # --- Aggregate observability stats ---
+    total_tokens_in = sum(c.tokens_in for c in call_records)
+    total_tokens_out = sum(c.tokens_out for c in call_records)
+    total_cost = sum(c.estimated_cost_usd for c in call_records)
+    avg_latency = (
+        sum(c.latency_ms for c in call_records) / len(call_records)
+        if call_records else 0.0
+    )
+
     # --- Build Digest ---
     metadata = RunMetadata(
         run_timestamp=datetime.now(tz=timezone.utc),
@@ -154,6 +165,10 @@ def run_pipeline(
         num_pairs_scored=len(scored_pairs),
         num_pairs_failed=num_failed,
         elapsed_seconds=round(elapsed, 2),
+        total_tokens_in=total_tokens_in,
+        total_tokens_out=total_tokens_out,
+        total_estimated_cost_usd=round(total_cost, 6),
+        avg_latency_ms=round(avg_latency, 1),
     )
 
     digest = Digest(
@@ -177,5 +192,25 @@ def run_pipeline(
         raw = json.load(f)
     Digest.model_validate(raw)
     logger.info("Digest validation passed.")
+
+    # --- Write run_metadata.json ---
+    # Separate from digest.json to keep the digest clean for the dashboard.
+    # The observability tab reads this file directly.
+    run_report = RunReport(metadata=metadata, call_metadata=call_records)
+    run_metadata_path = output_path.parent / "run_metadata.json"
+
+    # Append to history list so the dashboard can show cost across runs.
+    history: list[dict] = []
+    if run_metadata_path.exists():
+        try:
+            existing = json.loads(run_metadata_path.read_text())
+            history = existing if isinstance(existing, list) else [existing]
+        except Exception:
+            history = []
+    history.append(run_report.model_dump(mode="json"))
+
+    with open(run_metadata_path, "w") as f:
+        json.dump(history, f, indent=2)
+    logger.info("Wrote run metadata to %s (%d total runs)", run_metadata_path, len(history))
 
     return digest
