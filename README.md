@@ -23,7 +23,10 @@ Portfolio project for a Data Scientist role on Allstate's AI Risk, Governance an
 4. LLM judge      Claude Haiku via AWS Bedrock → 0–4 relevance score + reasoning + action
 5. Output         digest.json written to disk
 6. Dashboard      Streamlit reads digest.json — no LLM calls at render time
+7. Observability  CallMetadata captures tokens/latency/cost per call → run_metadata.json
 ```
+
+Per-call metrics (tokens in/out, latency, estimated cost, model id, timestamp) are captured at the API response layer in `src/scoring.py` and aggregated into `data/outputs/run_metadata.json` by the pipeline. The dashboard's **Run Metadata tab** surfaces per-run totals and a cost trend chart. Instrumenting at the application layer means metrics travel with the artifact and don't depend on AWS-side invocation logging being enabled.
 
 ## Evaluation methodology
 
@@ -66,6 +69,7 @@ The baseline is ~450× faster and free, but misses more than half of urgent sign
 | Agentic solutions | LLM judge loop in `src/scoring.py` and `src/pipeline.py` |
 | Evaluation rigor | Hand-labeled eval set, metrics, baseline comparison in `data/eval/` |
 | AWS Bedrock | `boto3` Converse API with native tool use in `src/scoring.py` |
+| Observability | `CallMetadata` in `src/scoring.py` → `run_metadata.json` → Run Metadata dashboard tab |
 | CI/CD | `.github/workflows/ci.yml` |
 | Docker | `Dockerfile` at project root |
 | Insurance domain | Fictional insurance AI portfolio in `data/portfolio/systems.yaml` |
