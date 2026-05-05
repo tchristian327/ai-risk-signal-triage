@@ -127,7 +127,7 @@ with tab_overview:
         "hand-curated governance sources, then uses an LLM judge to score each signal against a "
         "fictional AI portfolio. The goal is to surface actionable risk signals to model owners "
         "before they become incidents. "
-        "[GitHub repo](https://github.com/TODO)"  # fill in after pushing to GitHub
+        "[GitHub repo](https://github.com/tchristian327/ai-risk-signal-triage)"
     )
 
 # ── By System ────────────────────────────────────────────────────────────────
