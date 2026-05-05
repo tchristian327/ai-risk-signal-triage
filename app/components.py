@@ -119,14 +119,14 @@ def render_signal_card(signal: Signal) -> None:
 # ---------------------------------------------------------------------------
 
 _TH = (
-    "padding:8px 14px; text-align:center; background:#f5f5f5; "
+    "padding:8px 14px; text-align:center; background:#f5f5f5; color:#212121; "
     "border:1px solid #e0e0e0; font-size:0.88rem;"
 )
 _TD = "padding:8px 14px; text-align:center; border:1px solid #e0e0e0; font-size:0.88rem;"
 _TD_LABEL = "padding:8px 14px; text-align:left; border:1px solid #e0e0e0; font-size:0.88rem; font-weight:600;"
 _TD_WIN = (
     "padding:8px 14px; text-align:center; border:1px solid #e0e0e0; "
-    "font-size:0.88rem; font-weight:700; background:#e8f5e9;"
+    "font-size:0.88rem; font-weight:700; background:#e8f5e9; color:#1b5e20;"
 )
 
 
