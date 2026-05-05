@@ -275,3 +275,13 @@ The 65.3% off-by-one is partly inflated by the model being "close enough" when i
 **One regression:** The Obama/image-bias signal vs. Telematics Pricing Model was scored 2 by v2 (human label 0). The risk-category rule over-applied — the telematics model does list proxy discrimination as a known risk, but the LLM drew a category-level connection the human didn't endorse. One new false positive out of 49 is acceptable in the governance direction, but it confirms the risk that was flagged in the proposed changes.
 
 **Unexpected finding:** v2 off-by-one accuracy (75.5%) beats the logistic regression baseline (69.4%), despite the classifier winning on recall (44.4% vs. 61.1%). The classifier's LOO CV advantage shows up primarily in recall; the LLM judge v2 is better-calibrated across the full scale. The interview story the comparison produces: the classifier is ~450x faster and effectively free, but misses ~55% of urgent signals — the wrong error direction for governance. The LLM judge is slower and costs ~$1.68/1k pairs but catches more urgent signals and is better-calibrated. This is the intended finding and it holds after prompt iteration.
+
+---
+
+## 2026-05-05 — Explicit text color required on HTML table cells with light backgrounds
+
+**Decision:** `_TH` (header cells, `background:#f5f5f5`) and `_TD_WIN` (winner cells, `background:#e8f5e9`) in `app/components.py` pin explicit text colors: `color:#212121` on headers, `color:#1b5e20` on winner cells.
+
+**Why:** Streamlit's dark theme defaults inherited text color to near-white. Without pinned colors, white text on a light green or light gray background is unreadable — discovered after the first deploy of the Evaluation tab. Cells without explicit backgrounds (`_TD`, `_TD_LABEL`) are left alone so they inherit correctly from whichever theme the user is on.
+
+**Rule going forward:** Any `unsafe_allow_html` table cell with a light background must pin its text color explicitly.
