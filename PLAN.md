@@ -200,6 +200,8 @@ After the core data science work is complete, one additional day demonstrates th
 
 **Key skills loaded:** `streamlit-analytics-dashboard` (for the observability section in the dashboard).
 
+**Note (actual outcome):** Day 11 Phase 4 (CloudWatch screenshots) was pivoted to app-layer observability via the Run Metadata dashboard tab. Bedrock model invocation logging was off by default and was never enabled, so no CloudWatch metrics published. The screenshots step was not completed as originally specified. See DECISIONS.md entry dated 2026-05-05 for rationale.
+
 ### Day 12 — Infrastructure as Code with AWS CDK
 
 **Goal:** Provision the project's AWS resources (Bedrock model access via IAM, S3 bucket for run artifacts) using AWS CDK in Python instead of manual console configuration. Deploy the stack once against the real AWS account so there's a real artifact, not just code.

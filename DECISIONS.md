@@ -288,12 +288,10 @@ The 65.3% off-by-one is partly inflated by the model being "close enough" when i
 
 ---
 
-## 2026-05-05 — App-layer observability instead of CloudWatch
+## 2026-05-05 — CloudWatch pivot: app-layer observability instead of AWS-side metrics
 
-**Decision:** Observability is implemented entirely at the application layer (`CallMetadata` captured in `src/scoring.py`, aggregated into `RunReport` by `src/pipeline.py`, written to `data/outputs/run_metadata.json`) rather than relying on AWS Bedrock CloudWatch metrics.
+**Decision:** Observability is implemented at the application layer (`CallMetadata` in `src/scoring.py`, aggregated into `run_metadata.json` by `src/pipeline.py`) rather than relying on AWS Bedrock CloudWatch metrics.
 
-**Why:** Bedrock invocation logging must be explicitly enabled per-model in the AWS console; it is off by default and was never enabled during this project's pipeline runs, so CloudWatch metrics never published. The pivot to app-layer instrumentation turned out to be the better design regardless: metrics travel with the artifact, are interpretable without AWS console access, and work identically whether the caller is Bedrock or the direct Anthropic SDK. The Run Metadata dashboard tab surfaces the data.
+**Why:** Bedrock invocation logging must be explicitly enabled per-model in the AWS console; it was off during all pipeline runs in this project. Rather than enable logging and re-run, we treated the application-layer instrumentation as the primary observability artifact. This is arguably the better design regardless: app-layer metrics travel with the artifact, work identically against any LLM provider (Bedrock or direct Anthropic SDK), and don't require CloudWatch access to interpret. The Run Metadata dashboard tab surfaces the data.
 
-**Alternatives considered:** Enable Bedrock invocation logging and re-run the full pipeline to generate CloudWatch metrics as a visible portfolio deliverable. Rejected because it would add another ~8-minute run, the dashboard tab already demonstrates the concept clearly, and app-layer instrumentation is more portable and portable as a pattern.
-
-**Implication for future sessions:** Do not add a `docs/screenshots/` directory for CloudWatch screenshots — the README no longer references them. If Bedrock logging is ever enabled for another reason, the observability story doesn't change; it just gains a second artifact.
+**Alternatives considered:** Enable Bedrock invocation logging and re-run the pipeline to generate CloudWatch metrics as a visible deliverable. Rejected because (a) re-running the pipeline takes 8+ minutes and costs money, (b) the dashboard tab already demonstrates the concept, and (c) the app-layer approach is more portable.
