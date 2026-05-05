@@ -60,7 +60,7 @@ The system is split into three concerns, and this separation must be preserved:
 The Streamlit app must be fast and cheap because Streamlit reruns on every interaction. All expensive work (embeddings, LLM calls) happens in the pipeline, runs once, and writes results to `data/outputs/`. The dashboard only reads. The `Digest` schema is the contract between pipeline (producer) and dashboard (consumer) — changes to it require updating both sides.
 
 **App layer conventions (established Day 5):**
-- `requirements.txt` contains only app runtime deps (`streamlit`, `pydantic`). All pipeline deps (`boto3`, `sentence-transformers`, etc.) live in `requirements-pipeline.txt`. Streamlit Community Cloud reads only `requirements.txt` — adding pipeline deps there will blow the install size limit or slow deploys dramatically.
+- `requirements.txt` contains only app runtime deps (`streamlit`, `pydantic`, `pandas`). All pipeline deps (`boto3`, `sentence-transformers`, etc.) live in `requirements-pipeline.txt`. Streamlit Community Cloud reads only `requirements.txt` — adding pipeline deps there will blow the install size limit or slow deploys dramatically. `pandas` was added on Day 11 for the Run Metadata tab's cost-per-run chart.
 - All rendering helpers (`render_score_badge`, `render_pair_row`, `render_system_card`, `render_signal_card`, and any future ones) live in `app/components.py`. Never put multi-line render logic inline in `streamlit_app.py`.
 - Do not remove the `sys.path.insert` at the top of `app/streamlit_app.py`. It is required for Streamlit Cloud to resolve `from src.schemas import ...`. See DECISIONS.md for why `pyproject.toml` alone was insufficient.
 - When using `st.markdown(..., unsafe_allow_html=True)` for HTML tables, any cell with an explicit light background must also set an explicit `color` value. Streamlit's dark theme defaults to near-white inherited text, which is unreadable on light backgrounds. See `_TH` and `_TD_WIN` in `app/components.py` for the established pattern.
@@ -76,6 +76,8 @@ Two stages, in this order:
 Embeddings: prefer a local sentence-transformers model (`all-MiniLM-L6-v2`) for speed, cost, and reproducibility. Cache embeddings to disk keyed on content hash so reruns are free.
 
 An optional baseline classifier path exists for evaluation purposes only (see "Stretch additions" below). It consumes the same retriever output and produces `ScoredPair` objects with the same interface, but uses trained classifiers instead of the LLM judge. This is strictly a comparison arm in the eval framework, not a production scorer.
+
+**`score_pair` return type (changed Day 11):** `score_pair(system, signal, client)` returns `tuple[LLMScoreOutput, CallMetadata]`, not just `LLMScoreOutput`. Every caller must unpack both: `result, call_meta = score_pair(...)`. Do not discard `call_meta` silently — if a caller doesn't need it for aggregation, it still needs to be unpacked. See `src/pipeline.py` and `scripts/run_eval.py` for the established pattern.
 
 ## Tech stack (locked in)
 
@@ -108,13 +110,11 @@ Do not add dependencies beyond this list without asking first.
 
 The project includes a production hygiene pass (Day 11) covering observability, containerization, and CI. These exist to demonstrate the JD's signals around CI/CD, Docker, observability, and efficient LLM utilization. They are not load-bearing for the project's core data science work.
 
-**Observability.** Each pipeline run tracks per-LLM-call metadata: tokens in, tokens out, latency (ms), estimated cost, model id, and timestamp. This is written to `data/outputs/run_metadata.json` alongside the digest. The Streamlit dashboard has a section that loads run metadata and shows totals (total tokens, total cost, average latency) plus a simple bar chart of cost per run. A monitoring agent that monitors itself is thematically aligned with the project.
+**Observability.** Each pipeline run tracks per-LLM-call metadata: tokens in, tokens out, latency (ms), estimated cost, model id, and timestamp. `score_pair` in `src/scoring.py` returns `tuple[LLMScoreOutput, CallMetadata]` — any caller must unpack both values. The pipeline aggregates call records into `RunMetadata` totals and writes a `RunReport` (with the full per-call list) to `data/outputs/run_metadata.json`; this file is a JSON array that appends one entry per run. The dashboard's Run Metadata tab reads this file. Observability is implemented at the application layer deliberately — it does not depend on AWS-side Bedrock invocation logging being enabled (which is off by default and must be turned on explicitly in the console).
 
 **Docker.** A `Dockerfile` at the project root builds a working image capable of running the pipeline CLI scripts. It does not deploy anywhere; it just needs to build cleanly and run. A `.dockerignore` excludes unnecessary files.
 
-**CI.** `.github/workflows/ci.yml` runs on push and PR: install dependencies, `ruff check`, `pytest`, and `docker build` to verify the image builds. No pipeline execution in CI (no AWS credentials, no point).
-
-**Screenshots.** After the observability code is in place and at least one full pipeline run is complete, take screenshots of the AWS Bedrock CloudWatch metrics dashboard and save them to `docs/screenshots/`. Reference them in the README. This is a real artifact from real usage that ties the Bedrock decision to a visible deliverable.
+**CI.** `.github/workflows/ci.yml` runs on push and PR: install dependencies, `ruff check`, `pytest`, and `docker build` to verify the image builds. No pipeline execution in CI (no AWS credentials, no point). `ruff` is configured in `pyproject.toml`; run `ruff check .` locally before committing. E402 (module-level import not at top) is globally ignored because all scripts use `sys.path.insert` before imports — this is intentional and documented in DECISIONS.md.
 
 ## What NOT to do
 

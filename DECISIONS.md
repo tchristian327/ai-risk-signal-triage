@@ -285,3 +285,15 @@ The 65.3% off-by-one is partly inflated by the model being "close enough" when i
 **Why:** Streamlit's dark theme defaults inherited text color to near-white. Without pinned colors, white text on a light green or light gray background is unreadable — discovered after the first deploy of the Evaluation tab. Cells without explicit backgrounds (`_TD`, `_TD_LABEL`) are left alone so they inherit correctly from whichever theme the user is on.
 
 **Rule going forward:** Any `unsafe_allow_html` table cell with a light background must pin its text color explicitly.
+
+---
+
+## 2026-05-05 — App-layer observability instead of CloudWatch
+
+**Decision:** Observability is implemented entirely at the application layer (`CallMetadata` captured in `src/scoring.py`, aggregated into `RunReport` by `src/pipeline.py`, written to `data/outputs/run_metadata.json`) rather than relying on AWS Bedrock CloudWatch metrics.
+
+**Why:** Bedrock invocation logging must be explicitly enabled per-model in the AWS console; it is off by default and was never enabled during this project's pipeline runs, so CloudWatch metrics never published. The pivot to app-layer instrumentation turned out to be the better design regardless: metrics travel with the artifact, are interpretable without AWS console access, and work identically whether the caller is Bedrock or the direct Anthropic SDK. The Run Metadata dashboard tab surfaces the data.
+
+**Alternatives considered:** Enable Bedrock invocation logging and re-run the full pipeline to generate CloudWatch metrics as a visible portfolio deliverable. Rejected because it would add another ~8-minute run, the dashboard tab already demonstrates the concept clearly, and app-layer instrumentation is more portable and portable as a pattern.
+
+**Implication for future sessions:** Do not add a `docs/screenshots/` directory for CloudWatch screenshots — the README no longer references them. If Bedrock logging is ever enabled for another reason, the observability story doesn't change; it just gains a second artifact.
