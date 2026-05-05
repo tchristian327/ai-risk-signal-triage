@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -24,11 +25,24 @@ st.set_page_config(
 # Defer component imports until after page config to avoid any accidental
 # early Streamlit calls inside the module.
 from app.components import (  # noqa: E402
+    render_comparison_table,
+    render_confusion_matrix,
     render_pair_row,
-    render_score_badge,
     render_signal_card,
     render_system_card,
 )
+
+
+@st.cache_data
+def load_eval_data() -> dict | None:
+    eval_dir = PROJECT_ROOT / "data" / "eval"
+    try:
+        v1 = json.loads((eval_dir / "metrics_llm_judge_v1.json").read_text())
+        v2 = json.loads((eval_dir / "metrics_llm_judge_v2.json").read_text())
+        baseline = json.loads((eval_dir / "metrics_baseline.json").read_text())
+        return {"v1": v1, "v2": v2, "baseline": baseline}
+    except FileNotFoundError:
+        return None
 
 
 @st.cache_data
@@ -80,7 +94,9 @@ st.divider()
 # ---------------------------------------------------------------------------
 # Tabs
 # ---------------------------------------------------------------------------
-tab_overview, tab_system, tab_signal = st.tabs(["Overview", "By System", "By Signal"])
+tab_overview, tab_system, tab_signal, tab_eval = st.tabs(
+    ["Overview", "By System", "By Signal", "Evaluation"]
+)
 
 # ── Overview ────────────────────────────────────────────────────────────────
 with tab_overview:
@@ -185,3 +201,74 @@ with tab_signal:
                 show_signal=False,
                 show_system=True,
             )
+
+# ── Evaluation ───────────────────────────────────────────────────────────────
+with tab_eval:
+    eval_data = load_eval_data()
+
+    if eval_data is None:
+        st.info(
+            "Eval data not yet available. "
+            "Run the eval scripts to populate: `python scripts/run_eval.py`"
+        )
+    else:
+        st.markdown("## How well does this work?")
+        st.markdown(
+            "Measured against 49 hand-labeled (signal, system) pairs "
+            "spanning the full 0–4 score range, using stratified sampling "
+            "on cosine similarity to avoid biasing the eval set toward easy positives."
+        )
+
+        st.markdown("### System comparison")
+        render_comparison_table(eval_data["v1"], eval_data["v2"], eval_data["baseline"])
+        st.caption(
+            "★ = best value in that row. "
+            "Baseline uses leave-one-out cross-validation (48 labeled examples per prediction). "
+            "LLM judge is zero-shot."
+        )
+
+        st.markdown("### Headline metric")
+        v2_recall = eval_data["v2"]["recall_at_threshold_3"]
+        v1_recall = eval_data["v1"]["recall_at_threshold_3"]
+        delta_pp = (v2_recall["recall"] - v1_recall["recall"]) * 100
+        col_left, col_mid, col_right = st.columns([1, 2, 1])
+        with col_mid:
+            st.metric(
+                label="High-relevance signals caught — LLM judge v2 (score ≥ 3)",
+                value=(
+                    f"{v2_recall['recall'] * 100:.1f}% "
+                    f"({v2_recall['true_positives']} of {v2_recall['total_positives']})"
+                ),
+                delta=f"+{delta_pp:.1f}pp vs v1",
+            )
+
+        st.markdown("### Confusion matrix — LLM judge v2")
+        st.caption("Rows = predicted score · Columns = human label · Green diagonal = correct predictions")
+        render_confusion_matrix(eval_data["v2"]["confusion_matrix"])
+
+        st.markdown("### What these numbers mean")
+        st.markdown(
+            "The LLM judge v2 improved across every metric after four targeted prompt changes, "
+            "each tracing back to a specific failure mode identified in the error analysis. "
+            "Off-by-one accuracy jumped from 65% to 76%, showing the model is landing in the "
+            "right neighborhood more often even when it doesn't nail the exact score; recall "
+            "at score ≥ 3 rose from 33% to 44%, meaning 2 more high-relevance signals were "
+            "caught. The baseline classifier still wins on recall (61%) and exact match (37%) "
+            "— it's ~450× faster and costs nothing — but it misses more than half of urgent "
+            "signals, and it runs under leave-one-out CV with 48 labeled examples per prediction "
+            "while the LLM judge is zero-shot. For governance triage, where a missed urgent "
+            "signal is far worse than a false alarm, the LLM judge's better calibration and "
+            "human-readable reasoning justify its cost."
+        )
+
+        st.markdown("### Limitations")
+        st.markdown(
+            "- **Eval set size:** 49 pairs labeled by a single human. "
+            "A production system would require multiple labelers and inter-rater reliability scoring.\n"
+            "- **Signal sources:** Signals come primarily from the AI Incident Database. "
+            "A production system would pull from regulatory feeds, vendor advisories, "
+            "and internal incident reports.\n"
+            "- **Fictional portfolio:** System cards are fictional. "
+            "Real governance work would involve interviewing model owners "
+            "to build accurate system cards."
+        )

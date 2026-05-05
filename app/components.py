@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+
 import streamlit as st
 
 from src.schemas import AISystem, Signal, ScoredPair
@@ -110,3 +112,140 @@ def render_signal_card(signal: Signal) -> None:
 
     if signal.source_url:
         st.markdown(f"[Source link]({signal.source_url})")
+
+
+# ---------------------------------------------------------------------------
+# Eval view helpers
+# ---------------------------------------------------------------------------
+
+_TH = (
+    "padding:8px 14px; text-align:center; background:#f5f5f5; "
+    "border:1px solid #e0e0e0; font-size:0.88rem;"
+)
+_TD = "padding:8px 14px; text-align:center; border:1px solid #e0e0e0; font-size:0.88rem;"
+_TD_LABEL = "padding:8px 14px; text-align:left; border:1px solid #e0e0e0; font-size:0.88rem; font-weight:600;"
+_TD_WIN = (
+    "padding:8px 14px; text-align:center; border:1px solid #e0e0e0; "
+    "font-size:0.88rem; font-weight:700; background:#e8f5e9;"
+)
+
+
+def render_comparison_table(v1: dict, v2: dict, baseline: dict) -> None:
+    """Render three-column comparison table. Highlights best value per row."""
+
+    def pct(val: float) -> str:
+        return f"{val * 100:.1f}%"
+
+    def recall_str(d: dict) -> str:
+        return f"{d['recall'] * 100:.1f}% ({d['true_positives']}/{d['total_positives']})"
+
+    def latency_str(meta: dict) -> str:
+        ms = meta.get("avg_latency_ms", 0)
+        return f"{ms:,.0f} ms"
+
+    def cost_str(meta: dict, n_pairs: int) -> str:
+        cost = meta.get("estimated_cost_usd", 0.0)
+        if cost == 0:
+            return "$0.00"
+        return f"${cost / n_pairs * 1000:.2f}"
+
+    n = v1["n_pairs"]
+    m1, m2, mb = v1["run_metadata"], v2["run_metadata"], baseline["run_metadata"]
+
+    rows = [
+        {
+            "label": "Exact match accuracy",
+            "vals": [pct(v1["exact_match_accuracy"]), pct(v2["exact_match_accuracy"]), pct(baseline["exact_match_accuracy"])],
+            "scores": [v1["exact_match_accuracy"], v2["exact_match_accuracy"], baseline["exact_match_accuracy"]],
+            "best_fn": max,
+        },
+        {
+            "label": "Off-by-one accuracy",
+            "vals": [pct(v1["off_by_one_accuracy"]), pct(v2["off_by_one_accuracy"]), pct(baseline["off_by_one_accuracy"])],
+            "scores": [v1["off_by_one_accuracy"], v2["off_by_one_accuracy"], baseline["off_by_one_accuracy"]],
+            "best_fn": max,
+        },
+        {
+            "label": "Recall at score ≥ 3",
+            "vals": [recall_str(v1["recall_at_threshold_3"]), recall_str(v2["recall_at_threshold_3"]), recall_str(baseline["recall_at_threshold_3"])],
+            "scores": [v1["recall_at_threshold_3"]["recall"], v2["recall_at_threshold_3"]["recall"], baseline["recall_at_threshold_3"]["recall"]],
+            "best_fn": max,
+        },
+        {
+            "label": "Avg latency / pair",
+            "vals": [latency_str(m1), latency_str(m2), latency_str(mb)],
+            "scores": [m1.get("avg_latency_ms", float("inf")), m2.get("avg_latency_ms", float("inf")), mb.get("avg_latency_ms", float("inf"))],
+            "best_fn": min,
+        },
+        {
+            "label": "Cost / 1k pairs",
+            "vals": [cost_str(m1, n), cost_str(m2, n), cost_str(mb, n)],
+            "scores": [m1.get("estimated_cost_usd", float("inf")), m2.get("estimated_cost_usd", float("inf")), mb.get("estimated_cost_usd", 0.0)],
+            "best_fn": min,
+        },
+    ]
+
+    header = (
+        f'<tr>'
+        f'<th style="{_TH} text-align:left;">Metric</th>'
+        f'<th style="{_TH}">LLM Judge v1</th>'
+        f'<th style="{_TH}">LLM Judge v2</th>'
+        f'<th style="{_TH}">Baseline Classifier</th>'
+        f'</tr>'
+    )
+
+    body = ""
+    for row in rows:
+        best_score = row["best_fn"](row["scores"])
+        cells = f'<td style="{_TD_LABEL}">{row["label"]}</td>'
+        for i, val in enumerate(row["vals"]):
+            is_best = row["scores"][i] == best_score
+            style = _TD_WIN if is_best else _TD
+            marker = " ★" if is_best else ""
+            cells += f'<td style="{style}">{val}{marker}</td>'
+        body += f"<tr>{cells}</tr>"
+
+    html = (
+        '<div style="overflow-x:auto; margin-bottom:16px;">'
+        '<table style="border-collapse:collapse; width:100%;">'
+        f"<thead>{header}</thead>"
+        f"<tbody>{body}</tbody>"
+        "</table></div>"
+    )
+    st.markdown(html, unsafe_allow_html=True)
+
+
+def render_confusion_matrix(matrix: list[list[int]]) -> None:
+    """Render a 5x5 confusion matrix. Rows = predicted score, columns = human label.
+
+    Diagonal cells are highlighted to show correct predictions.
+    """
+    labels = ["0", "1", "2", "3", "4"]
+
+    col_headers = "".join(
+        f'<th style="{_TH}">{lbl}</th>' for lbl in labels
+    )
+    header = (
+        f'<tr>'
+        f'<th style="{_TH} text-align:left;">Pred ↓ / Human →</th>'
+        f'{col_headers}'
+        f'</tr>'
+    )
+
+    body = ""
+    for pred_idx, row in enumerate(matrix):
+        cells = f'<td style="{_TD_LABEL}">{labels[pred_idx]}</td>'
+        for human_idx, count in enumerate(row):
+            is_diag = pred_idx == human_idx
+            style = _TD_WIN if is_diag else _TD
+            cells += f'<td style="{style}">{count}</td>'
+        body += f"<tr>{cells}</tr>"
+
+    html = (
+        '<div style="overflow-x:auto; margin-bottom:8px;">'
+        '<table style="border-collapse:collapse;">'
+        f"<thead>{header}</thead>"
+        f"<tbody>{body}</tbody>"
+        "</table></div>"
+    )
+    st.markdown(html, unsafe_allow_html=True)
